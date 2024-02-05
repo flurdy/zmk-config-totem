@@ -20,9 +20,9 @@
 #define NAVI 1
 #define SYMB 2
 #define NUMB 3
-#define ADJS 4
-#define FUNC 5
-#define MEDI 6
+#define FUNC 4
+#define MEDI 5
+#define BLUE 6
 
 &mt {
   quick-tap-ms = <100>;
@@ -68,17 +68,17 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃    ⌘ A    ┃    ⎇ R   ┃    ⇧ S    ┃    ^ T    ┃     G     ┃   ┃     M     ┃    ^ N    ┃     ⇧ E   ┃   ⎇ I    ┃     ⌘ U   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃           ┃
+// ┃    BSPC   ┃     Z     ┃     ⎄ X   ┃   MEH C   ┃   HYP D   ┃     V     ┃   ┃     K     ┃   HYP H   ┃   MEH ,   ┃    ⎄ .    ┃     /     ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    ESC    ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃   BSPC    ┃    DEL    ┃
+//                                     ┃    ESC    ┃  NUM SPC  ┃  NAV TAB  ┃   ┃ SYM ENTER ┃  NUM BSPC ┃  FUN DEL  ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷             ╷         ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &mt RGUI SQT
                 &mt LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T    &kp G          &kp M        &mt LCTRL N &mt LSHFT E &mt LALT I  &mt LGUI U
-    &kp Z       &kp Z       &kp X       &kp C       &kp D          &kp V          &kp K        &kp H       &kp COMMA   &kp DOT     &lt MEDI FSLH    &kp FSLH
-                                        &kp ESC     &lt NUMB SPACE &lt NAVI TAB   &lt SYMB RET &kp BSPC    &lt FUNC DEL
+    &kp BSPC  &kp Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LG))) D  &kp V  &kp K  &mt LS(LA(LC(LG))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &lt MEDI FSLH  &kp FSLH
+                                        &kp ESC     &lt NUMB SPACE &lt NAVI TAB   &lt SYMB RET &lt NUMB BSPC    &lt FUNC DEL
                         >;
                 };
 
@@ -92,9 +92,9 @@ label= "NAVI"                              ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃   HOME    ┃    UP     ┃   END     ┃   PG_UP   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃    GUI    ┃    ALT    ┃   SHIFT   ┃   CTLR    ┃           ┃   ┃           ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃   PG_DN   ┃
+//             ┃    GUI    ┃    ALT    ┃   SHIFT   ┃   CTLR    ┃ CAPS WORD ┃   ┃           ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃   PG_DN   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┃           ┃    UNDO   ┃    CUT    ┃   COPY    ┃   PASTE   ┃   REDO    ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -102,9 +102,9 @@ label= "NAVI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &trans      &bt BT_CLR  &trans      &kp EQUAL   &trans          &trans      &kp HOME    &kp UP      &kp END     &kp PG_UP
-                &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &trans          &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN
-    &trans      &kp DEL     &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans      &trans
-                                        &trans      &trans      &trans          &mo ADJS    &trans      &trans
+                &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &caps_word      &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN
+    &trans      &kp K_UNDO  &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_REDO      &trans      &trans      &trans      &trans      &trans      &trans
+                                        &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
                 };
 
@@ -122,15 +122,15 @@ label= "SYMB"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃     \     ┃     ~     ┃     &     ┃     $     ┃     {     ┃   ┃     }     ┃           ┃           ┃           ┃     ?     ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
+//                                     ┃           ┃    GIF    ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp LS(LA(0)) &kp HASH    &kp POUND   &kp CARET   &kp LBKT        &kp RBKT    &kp AMPS    &trans      &trans     &trans
+                &kp LS(LA(0)) &kp HASH  &kp POUND   &kp CARET   &kp LBKT        &kp RBKT    &kp AMPS    &trans      &trans     &trans
                 &kp PIPE    &kp AT      &kp UNDER   &kp GRAVE   &kp LPAR        &kp RPAR    &kp DQT     &kp COLON   &kp SEMI   &kp LGUI
     &trans      &kp BSLH    &kp TILDE   &kp AMPS    &kp DLLR    &kp LBRC        &kp RBRC    &trans      &trans      &trans     &kp QMARK   &trans
-                                        &trans      &gif        &mo ADJ         &trans      &kp C_PP   &trans
+                                        &to BASE    &gif        &trans          &trans      &trans      &trans
                         >;
                 };
 
@@ -155,32 +155,7 @@ label= "NUMB"                              ;
                 &kp N1        &kp N2         &kp N3          &kp N4      &kp N5     &kp N6     &kp N7      &kp N8      &kp N9      &kp N0
             &mt LGUI EXCL  &mt LALT EQUAL  &mt LSHFT MINUS   &mt LCTRL PLUS  &kp LT  &kp GT    &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp LGUI
     &trans      &trans        &trans         &kp PERCENT     &kp STAR    &kp RA(Z)  &kb RA(X)  &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp DOT       &kp COMMA
-                                             &trans          &trans      &trans     &mo ADJ    &kp trans   &KP_N0
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                adjust_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "ADJS"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
-//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
-// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
-// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-
-                &sys_reset  &bt BT_CLR &out OUT_TOG &trans      &trans          &trans      &trans      &trans      &trans     &trans
-                &bootloader &bt BT_NXT  &trans      &trans      &trans          &trans      &trans      &trans      &trans     &trans
-    &trans      &trans      &bt BT_PRV  &trans      &trans      &trans          &trans      &trans      &trans      &trans     &trans    &trans
-                                        &trans      &trans      &trans          &trans      &trans      &trans
+                                             &to BASE        &trans      &trans     &mo ADJ    &kp trans   &KP_N0
                         >;
                 };
 
@@ -205,11 +180,9 @@ label= "FUNC"                              ;
                 &kp PAUSE_BREAK &kp SLCK &kp KP_NUM &kp PSCRN   &kp CAPS        &trans      &kp F7      &kp F8      &kp F9      &kp F12
                 &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp INS         &trans      &kp F4      &kp F5      &kp F6      &kp F11
     &trans      &trans      &trans      &trans      &trans      &trans          &trans      &kp F1      &kp F2      &kp F3      &kp F10     &trans
-                                        &trans      &trans      &trans          &trans      &trans      &trans
+                                        &to BASE     &trans      &trans         &trans      &trans      &trans
                         >;
                 };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
@@ -218,21 +191,71 @@ label= "FUNC"                              ;
 label= "MEDI"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃   REWIND  ┃    PLAY   ┃  FORWARD  ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃   REWIND  ┃    PLAY   ┃  FORWARD  ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃ BOOTLOAD  ┃   RESET   ┃           ┃           ┃           ┃   ┃           ┃   LAST    ┃    STOP   ┃    NEXT   ┃    VOL+   ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃   LAST    ┃    STOP   ┃    NEXT   ┃    VOL+   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃    MUTE   ┃    VOL-   ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃    MUTE   ┃    VOL-   ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃  SYSTEM   ┃ BLUETOOTH ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &trans      &trans      &trans      &trans      &trans          &trans      &kp C_RW    &kp C_PLAY  &kp C_FF    &trans
+                &trans      &trans      &trans      &trans      &trans          &trans      &kp C_PREV  &kp C_STOP  &kp C_NEXT  &kp C_VOL_UP
+    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &kp C_MUTE  &kp C_VOL_DN    &trans
+                                        &to BASE    &to SYST    &to BLUE        &trans      &trans      &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                system_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "SYST"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃   LOCK    ┃           ┃           ┃           ┃   SLEEP   ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃ BOOTLOAD  ┃   RESET   ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃   RESET   ┃  BOOTLOAD ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &sys_reset  &bt BT_CLR &out OUT_TOG &trans      &trans          &trans      &kp C_RW    &kp C_PLAY  &kp C_FF    &trans
-                &bootloader &sys_reset  &trans      &trans      &trans          &trans      &kp C_PREV  &kp C_STOP  &kp C_NEXT  &kp C_VOL_UP
-    &trans      &trans      &bt BT_PRV  &trans      &trans      &trans          &trans      &trans      &trans      &kp C_MUTE  &kp C_VOL_DN    &trans
-                                        &trans      &trans      &trans          &trans      &trans      &trans
+                &kp K_LOCK  &trans      &trans      &trans      &kp C_SLEEP     &trans      &trans      &trans      &trans     &trans
+                &bootloader &sys_reset  &trans      &trans      &trans          &trans      &trans      &trans      &sys_reset &bootloader
+    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans     &trans    &trans
+                                        &to BASE    &trans      &trans          &trans      &trans      &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                bluetooth_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "BLUE"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃ BT DISC 0 ┃ BT DISC 1 ┃ BT DISC 2 ┃ BT DISC 3 ┃           ┃   ┃           ┃           ┃  BT NEXT  ┃           ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃ BT SEL 0  ┃ BT SEL 1  ┃ BT SEL 2  ┃ BT SEL 3  ┃           ┃   ┃           ┃           ┃  BT PREV  ┃           ┃           ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃ BTCLEARALL┃  BT CLEAR ┃   OUT TOG ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2  &bt BT_DISC 3  &trans  &trans   &trans      &bt BT_NXT      &trans     &trans
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans      &trans      &bt BT_PRV      &trans     &trans
+    &trans      &bt CLR_ALL  &bt CLR    &out OUT_TOG  &trans    &trans          &trans      &trans      &trans          &trans     &trans    &trans
+                                        &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
                 };
 
