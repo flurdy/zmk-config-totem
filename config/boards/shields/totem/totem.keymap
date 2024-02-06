@@ -66,15 +66,67 @@
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
+        mc_aa: macro_aa {
+            label = "Å";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N2>
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LGUI>
+                , <&macro_tap &kp A>
+                ;
+        };
+        mc_spl: macro_split_left {
+            label = "SPLIT_LEFT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp K>
+                , <&macro_release &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp LEFT>
                 , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp G &kp I &kp F>
+                ;
+        };
+        mc_spr: macro_split_right {
+            label = "SPLIT_RIGHT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp K>
+                , <&macro_release &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        mc_spu macro_split_up {
+            label = "SPLIT_UP";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp K>
+                , <&macro_release &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        mc_spd: macro_split_down {
+            label = "SPLIT_DOWN";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp K>
+                , <&macro_release &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LSHFT>
                 ;
         };
     };
@@ -335,7 +387,7 @@ label= "NORW"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &mc_aa
                 &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &kp RA(O)   &kp RA(A)
     &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans   &trans
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
@@ -424,9 +476,9 @@ label= "TERM"                              ;
 label= "SPLT"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃ SPLIT UP  ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃SPLIT LEFT ┃SPLIT DOWN ┃SPLIT RIGHT┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -435,8 +487,8 @@ label= "SPLT"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &none       &trans      &trans          &none       &none       &none       &none       &none
-                &trans      &trans      &none       &trans      &trans          &none       &none       &none       &none       &none
+                &trans      &trans      &none       &trans      &trans          &none       &none       &mc_spu     &none       &none
+                &trans      &trans      &none       &trans      &trans          &none       &mc_spl     &mc_spd     &mc_spr     &none
     &trans      &trans      &trans      &trans      &trans      &trans          &none       &none       &none       &none       &none       &trans
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
