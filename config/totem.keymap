@@ -20,6 +20,7 @@
 #define NAVI 1
 #define SYMB 2
 #define NUMB 3
+#define FUNC 4
 
 
 &mt {
@@ -63,7 +64,7 @@ label= "BASE"                              ;
                 &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &mt RGUI SQT
                 &mt LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T    &kp G          &kp M        &mt LCTRL N &mt LSHFT E &mt LALT I  &mt LGUI U
     &kp BSPC    &kp Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LGUI))) D  &kp V  &kp K  &mt LS(LA(LC(LGUI))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &kp FSLH  &none
-                                        &kp ESC  &lt NUMB SPACE  &lt NAVI TAB   &lt SYMB RET &lt NUMB BSPC    &kp DEL
+                                        &np FUNC ESC  &lt NUMB SPACE  &lt NAVI TAB   &lt SYMB RET &lt NUMB BSPC    &kp DEL
                         >;
                 };
 
@@ -87,7 +88,7 @@ label= "NAVI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &none       &none       &none       &none       &none           &kp LC(HOME)  &kp HOME  &kp UP      &kp END     &kp PG_UP
-       &mt LGUI LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &caps_word      &none  &kp LEFT  &kp DOWN  &kp RIGHT   &kp PG_DN
+       &mt LMETA LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &caps_word      &none  &kp LEFT  &kp DOWN  &kp RIGHT   &kp PG_DN
     &kp LC(BSPC)  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &none        &none      &kp LC(END)  &none       &none
                                         &to BASE    &trans      &trans          &none    &kp LC(BSPC)  &kp LC(DEL)
                         >;
@@ -144,6 +145,30 @@ label= "NUMB"                              ;
                         >;
                 };
 
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                function_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "FUNC"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃   Pause   ┃   Scroll  ┃  Numlock  ┃   Print   ┃    Caps   ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃    GUI    ┃    ALT    ┃   SHIFT   ┃   CTRL    ┃    Ins    ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp PAUSE_BREAK &kp SLCK &kp KP_NUM &kp PSCRN   &kp CAPS        &none       &kp F7      &kp F8      &kp F9      &kp F12
+                &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp INS         &none       &kp F4      &kp F5      &kp F6      &kp F11
+    &trans      &none       &none       &none       &none       &none           &none       &kp F1      &kp F2      &kp F3      &kp F10     &trans
+                                        &to BASE    &trans      &trans          &trans      &trans      &trans
+                        >;
+                };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
