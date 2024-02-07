@@ -69,7 +69,7 @@
         mc_aa: macro_aa {
             label = "Å";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             bindings
                 = <&macro_press &kp LGUI>
                 , <&macro_tap &kp A>
@@ -77,10 +77,17 @@
                 , <&macro_tap &kp A>
                 ;
         };
+        vsc: vscode_cmd {
+            #binding-cells = <2>;
+            compatible = "zmk,behavior-macro-one-param";
+            bindings =
+                <&kp LC(K)>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+        };
         mc_spl: macro_split_left {
             label = "SPLIT_LEFT";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <3>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -93,7 +100,7 @@
         mc_spr: macro_split_right {
             label = "SPLIT_RIGHT";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <4>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -106,7 +113,7 @@
         mc_spu macro_split_up {
             label = "SPLIT_UP";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <5>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -119,7 +126,7 @@
         mc_spd: macro_split_down {
             label = "SPLIT_DOWN";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <6>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -127,6 +134,76 @@
                 , <&macro_press &kp LSHFT>
                 , <&macro_tap &kp DOWN>
                 , <&macro_release &kp LSHFT>
+                ;
+        };
+        mc_zen: macro_zen {
+            label = "ZEN";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <7>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp K>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Z>
+                ;
+        };
+        mc_dhm: macro_del_home {
+            label = "DELHOME";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <8>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp HOME>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp DEL>
+                ;
+        };
+        mc_den: macro_del_end {
+            label = "DELEND";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <9>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp END>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp DEL>
+                ;
+        };
+        mc_dtp: macro_del_top {
+            label = "DELTOP";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <10>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp HOME>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp DEL>
+                ;
+        };
+        mc_dbm: macro_del_btm {
+            label = "DELEND";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <11>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp END>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp DEL>
+                ;
+        };
+        mc_sav: macro_save_file {
+            label = "SAVE_FILE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <12>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp K>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp S>
                 ;
         };
     };
@@ -175,20 +252,20 @@ label= "BASE"                              ;
 label= "NAVI"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃   HOME    ┃    UP     ┃   END     ┃   PG_UP   ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃    TOP    ┃   HOME    ┃    UP     ┃   END     ┃   PG_UP   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃   SELECT  ┃   RELOAD  ┃    SAVE   ┃  NEW TAB  ┃ CAPS WORD ┃   ┃           ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃   PG_DN   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃^BACKSPACE ┃    UNDO   ┃    CUT    ┃   COPY    ┃   PASTE   ┃   REDO    ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┃^BACKSPACE ┃    UNDO   ┃    CUT    ┃   COPY    ┃   PASTE   ┃   REDO    ┃   ┃           ┃           ┃           ┃   BTTM    ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃   SELECT  ┃^BACKSPACE ┃   ^ DEL   ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none       &none       &none       &none           &none       &kp HOME      &kp UP      &kp END     &kp PG_UP
+                &none       &none       &none       &none       &none           &kp LC(HOME)  &kp HOME  &kp UP      &kp END     &kp PG_UP
        &mt LGUI LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &caps_word      &none  &kp LEFT  &kp DOWN  &kp RIGHT   &kp PG_DN
-    &kp LC(BSPC)  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &none         &none       &none       &none       &none
+    &kp LC(BSPC)  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &none        &none      &kp LC(END)  &none       &none
                                         &to BASE    &trans      &trans          &mo SELC    &kp LC(BSPC)  &kp LC(DEL)
                         >;
                 };
@@ -278,18 +355,18 @@ label= "CODE"                              ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃   QWERTY  ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃  DUPE UP  ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃ DUPE DOWN ┃           ┃           ┃
+//             ┃           ┃           ┃   SAVE    ┃           ┃           ┃   ┃           ┃           ┃ DUPE DOWN ┃           ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃  SIDEBAR  ┃           ┃           ┃           ┃ Move Term ┃  Terminal ┃   ┃           ┃           ┃           ┃           ┃           ┃  COMMENT  ┃
+// ┃  SIDEBAR  ┃    ZEN    ┃           ┃           ┃ Move Term ┃  Terminal ┃   ┃           ┃           ┃           ┃           ┃           ┃  COMMENT  ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃   LAUNCH  ┃    RUN    ┃   SPLIT   ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &to QWER    &trans      &trans      &trans      &trans          &trans      &trans      &kp LA(LC(LS(UP)))    &trans      &trans
-                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &kp LA(LC(LS(DOWN)))  &trans      &trans
-    &kp LC(BSLH)  &trans    &trans      &trans   &kp LA(LC(LS(E)))  &kp LC(GRAVE)  &trans   &trans      &trans          &trans      &trans   &kp LC(FSLH)
+                &to QWER    &none       &none       &none       &none           &none       &none    &kp LA(LC(LS(UP)))    &none  &none
+                &none       &none       &vsc S     &none       &none           &none       &none    &kp LA(LC(LS(DOWN)))  &none  &none
+    &kp LC(BSLH)  &mc_zen   &none       &none    &kp LA(LC(LS(E)))  &kp LC(GRAVE)  &none    &none       &none       &none       &none       &kp LC(FSLH)
                                         &to BASE    &trans      &trans          &kp LG(A)   &kp LA(F12)  &MO SPLT
                         >;
                 };
@@ -328,7 +405,7 @@ label= "TILE"                              ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃  SCRATCH  ┃ SCRTCHALL ┃           ┃           ┃  META `   ┃   ┃           ┃ META HOME ┃  META UP  ┃ META END  ┃ META PGUP ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃ META SF ` ┃   ┃           ┃ META LEFT ┃ META DOWN ┃ METARIGHT ┃ METAPGDWN ┃
+//             ┃           ┃           ┃           ┃           ┃ META SF ` ┃   ┃           ┃ META LEFT ┃ META DOWN ┃ METARIGHT ┃ META PGDN ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃   CTRL    ┃   SHIFT   ┃    ALT    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -339,7 +416,7 @@ label= "TILE"                              ;
 
                 &kp LG(LC(ESC))  &kp LG(LS(ESC))  &none  &none  &kp LG(GRAVE)   &none  &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
                 &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp LG(LS(GRAVE))  &none  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
-    &trans      &trans      &kp LCTRL   &kp LSHFT   &kp LALT    &none           &none  &none         &none         &none          &none       &none
+    &none       &none       &kp LCTRL   &kp LSHFT   &kp LALT    &none           &none       &none       &none         &none       &none       &none
                                         &to BASE    &trans      &trans          &mo TSIZ   &trans      &trans
                         >;
                 };
@@ -426,20 +503,20 @@ label= "EMOJ"                              ;
 label= "SELC"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃  SEL TOP  ┃ SEL HOME  ┃           ┃ SEL END   ┃ SEL BTTM  ┃
+//             ┃  DEL TOP  ┃ DEL HOME  ┃           ┃ DEL END   ┃  DEL BTTM ┃   ┃  SEL TOP  ┃ SEL HOME  ┃           ┃ SEL END   ┃ SEL BTTM  ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃           ┃ DEL LEFT  ┃           ┃ DEL RIGHT ┃           ┃   ┃           ┃ SEL LEFT  ┃           ┃ SEL RIGHT ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┃           ┃           ┃           ┃           ┃ DEL BTTM  ┃           ┃   ┃           ┃           ┃           ┃ SEL BTTM  ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃   TERM    ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none       &none       &none       &none           &kp LC(LS(HOME))  &kp LS(HOME)  &none     &kp LS(END)  &kp LC(LS(END))
+                &mc_dtp     &mc_dhm       &none     &mc_den     &mc_dbm         &kp LC(LS(HOME))  &kp LS(HOME)  &none  &kp LS(END)  &kp LC(LS(END))
                 &none       &kp LC(BSPC)  &none     &kp LC(DEL)  &none          &none   &kp LC(LS(LEFT))  &none     &kp LC(LS(RIGHT))  &none
-    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &none       &none       &trans
+    &trans      &none       &none       &none       &mc_dbm     &none           &none       &none       &none       &none       &kp LC(LS(END))  &trans
                                         &to BASE    &trans      &trans          &trans      &mo TERM    &trans
                         >;
                 };
