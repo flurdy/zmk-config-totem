@@ -82,7 +82,7 @@
             compatible = "zmk,behavior-macro-one-param";
             bindings =
                 <&kp LC(K)>,
-                <&macro_param_1to1 &kp LS(MACRO_PLACEHOLDER>);
+                <&macro_param_1to1 &kp LS(MACRO_PLACEHOLDER)>;
         };
         mc_rm2: macro_rmeta2 {
             label = "MCRMETA2";
