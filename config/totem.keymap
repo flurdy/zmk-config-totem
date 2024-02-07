@@ -367,7 +367,7 @@ label= "CODE"                              ;
                 &to QWER    &none       &none       &none       &none           &none       &none    &kp LA(LC(LS(UP)))    &none  &none
                 &none       &none       &vsc S     &none       &none           &none       &none    &kp LA(LC(LS(DOWN)))  &none  &none
     &kp LC(BSLH)  &mc_zen   &none       &none    &kp LA(LC(LS(E)))  &kp LC(GRAVE)  &none    &none       &none       &none       &none       &kp LC(FSLH)
-                                        &to BASE    &trans      &trans          &kp LG(A)   &kp LA(F12)  &MO SPLT
+                                        &to BASE    &trans      &trans          &kp LG(A)   &kp LA(F12)  &mo SPLT
                         >;
                 };
 
