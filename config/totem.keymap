@@ -110,7 +110,7 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
-        mc_spu macro_split_up {
+        mc_spu: macro_split_up {
             label = "SPLIT_UP";
             compatible = "zmk,behavior-macro";
             #binding-cells = <5>;
