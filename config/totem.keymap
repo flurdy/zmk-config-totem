@@ -73,6 +73,18 @@
                 <&kp LC(K)>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
+        mc_rm2: macro_rmeta2 {
+            label = "MCRMETA2";
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp RGUI>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                ;
+        };
+
     };
 
         keymap {
@@ -330,7 +342,7 @@ label= "NORW"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &none
+                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &mc_rm2 A A
                 &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &kp RA(O)   &kp RA(A)
     &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans   &trans
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
