@@ -77,12 +77,11 @@
             label = "MCRMETA2";
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings
-                = <&macro_press &kp RGUI>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp RGUI>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                ;
+            bindings =
+               <&macro_press &kp RGUI>,
+               <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+               <&macro_release &kp RGUI>,
+               <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
         };
 
     };
