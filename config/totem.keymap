@@ -69,7 +69,7 @@
         mc_aa: macro_aa {
             label = "Å";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LGUI>
                 , <&macro_tap &kp A>
@@ -78,7 +78,7 @@
                 ;
         };
         vsc: vscode_cmd {
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             compatible = "zmk,behavior-macro-one-param";
             bindings =
                 <&kp LC(K)>,
@@ -87,7 +87,7 @@
         mc_spl: macro_split_left {
             label = "SPLIT_LEFT";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <3>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -100,7 +100,7 @@
         mc_spr: macro_split_right {
             label = "SPLIT_RIGHT";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <4>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -113,7 +113,7 @@
         mc_spu: macro_split_up {
             label = "SPLIT_UP";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <5>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -126,7 +126,7 @@
         mc_spd: macro_split_down {
             label = "SPLIT_DOWN";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <6>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -139,7 +139,7 @@
         mc_zen: macro_zen {
             label = "ZEN";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <7>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
@@ -150,7 +150,7 @@
         mc_dhm: macro_del_home {
             label = "DELHOME";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <8>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp HOME>
@@ -161,7 +161,7 @@
         mc_den: macro_del_end {
             label = "DELEND";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <9>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp END>
@@ -172,7 +172,7 @@
         mc_dtp: macro_del_top {
             label = "DELTOP";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <10>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_press &kp LCTRL>
@@ -185,7 +185,7 @@
         mc_dbm: macro_del_btm {
             label = "DELEND";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <11>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_press &kp LCTRL>
@@ -198,7 +198,7 @@
         mc_sav: macro_save_file {
             label = "SAVE_FILE";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <12>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp K>
