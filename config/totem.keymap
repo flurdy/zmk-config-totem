@@ -34,6 +34,33 @@
 
 / {
 
+   behaviors {
+        td_sl: tap_dance_sleep {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&kp C_SLEEP>;
+        };
+        td_lc: tap_dance_lock {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&kp K_LOCK>;
+        };
+        td_rs: tap_dance_reset {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&sys_reset>;
+        };
+        td_bo: tap_dance_boot {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&bootloader>;
+        };
+    };
+
     macros {
         vsc: vscode_cmd {
             #binding-cells = <1>;
@@ -224,7 +251,7 @@ label= "MEDI"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp K_LOCK  &none       &kp C_BRI_UP  &none     &kp C_SLEEP     &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
+                &td_lc      &none       &kp C_BRI_UP  &none     &td_sl          &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
                 &none       &none       &kp C_BRI_DN  &none     &none           &none       &kp C_PREV  &kp C_STOP  &kp C_NEXT  &kp C_VOL_UP
     &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &kp C_VOL_DN    &trans
                                         &to BASE    &trans      &none           &trans      &trans      &trans
