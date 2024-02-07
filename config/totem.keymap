@@ -26,6 +26,7 @@
 #define TILE 7
 #define TSIZ 8
 #define NORW 9
+#define SELC 10
 
 
 &mt {
@@ -82,6 +83,28 @@
                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                <&macro_release &kp RGUI>,
                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+        };
+        mc_sldl: macro_select_delete {
+            label = "MCSELDEL";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+               <&macro_press &kp LSHFT>,
+               <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+               <&macro_release &kp LSHFT>,
+               <&macro_tap &kp DEL>;
+        };
+        mc_csldl: macro_ctrsel_del {
+            label = "MCCSLDEL";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+               <&macro_press &kp LSHFT>,
+               <&macro_press &kp LCTRL>,
+               <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+               <&macro_release &kp LCTRL>,
+               <&macro_release &kp LSHFT>,
+               <&macro_tap &kp DEL>;
         };
 
     };
@@ -143,7 +166,7 @@ label= "NAVI"                              ;
                 &none       &none       &none       &none       &none           &kp LC(HOME)  &kp HOME  &kp UP      &kp END     &kp PG_UP
        &mt LMETA LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &caps_word      &none  &kp LEFT  &kp DOWN  &kp RIGHT   &kp PG_DN
     &kp LC(BSPC)  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &none        &none      &kp LC(END)  &none       &none
-                                        &to BASE    &trans      &trans          &none    &kp LC(BSPC)  &kp LC(DEL)
+                                        &to BASE    &trans      &trans          &mo SELC    &kp LC(BSPC)  &kp LC(DEL)
                         >;
                 };
 
@@ -345,6 +368,31 @@ label= "NORW"                              ;
                 &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &kp RA(O)   &kp RA(A)
     &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans   &trans
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                select_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "SELC"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃  DEL TOP  ┃ DEL HOME  ┃           ┃ DEL END   ┃  DEL BTTM ┃   ┃  SEL TOP  ┃ SEL HOME  ┃           ┃ SEL END   ┃ SEL BTTM  ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃           ┃ DEL LEFT  ┃           ┃ DEL RIGHT ┃           ┃   ┃           ┃ SEL LEFT  ┃           ┃ SEL RIGHT ┃           ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃           ┃           ┃           ┃ DEL BTTM  ┃           ┃   ┃           ┃           ┃           ┃ SEL BTTM  ┃           ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃   TERM    ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+          &mc_csldl HOME  &mc_sldl HOME  &none  &mc_sldl END  &mc_csldl END   &kp LC(LS(HOME))  &kp LS(HOME)  &none  &kp LS(END)  &kp LC(LS(END))
+                &none       &kp LC(BSPC)  &none     &kp LC(DEL)  &none          &none   &kp LC(LS(LEFT))  &none    &kp LC(LS(RIGHT))  &none
+    &trans      &none       &none       &none       &mc_csldl END  &none        &none       &none       &none      &kp LC(LS(END))  &none    &trans
+                                        &to BASE    &trans      &trans          &trans      &none    &trans
                         >;
                 };
 
