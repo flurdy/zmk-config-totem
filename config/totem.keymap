@@ -28,7 +28,6 @@
 #define NORW 9
 #define SELC 10
 #define TERM 11
-#define SPLT 12
 
 
 &mt {
@@ -269,7 +268,7 @@ label= "CODE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃  SIDEBAR  ┃    ZEN    ┃           ┃           ┃ Move Term ┃  Terminal ┃   ┃           ┃           ┃           ┃           ┃           ┃  COMMENT  ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃   LAUNCH  ┃    RUN    ┃   SPLIT   ┃
+//                                     ┃           ┃           ┃           ┃   ┃   LAUNCH  ┃    RUN    ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -277,7 +276,7 @@ label= "CODE"                              ;
                 &none       &none       &none       &none       &none           &none       &none    &kp LA(LC(LS(UP)))    &none  &none
                 &none       &none       &vsc S      &none       &none           &none       &none    &kp LA(LC(LS(DOWN)))  &none  &none
     &kp LC(BSLH)  &vsc Z    &none       &none    &kp LA(LC(LS(E)))  &kp LC(GRAVE)  &none    &none       &none       &none       &none       &kp LC(FSLH)
-                                        &to BASE    &trans      &trans          &kp LG(A)   &kp LA(F12)  &mo SPLT
+                                        &to BASE    &trans      &trans          &kp LG(A)   &kp LA(F12)  &trans
                         >;
                 };
 
@@ -424,34 +423,9 @@ label= "TERM"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &kp LC(U)   &none       &kp LC(K)   &none           &none   &kp LCTRL(A)    &none    &kp LC(E)      &none
+                &none       &kp LC(U)   &none       &kp LC(K)   &none           &none   &kp LC(A)       &none    &kp LC(E)      &none
                 &none       &kp LC(W)   &none       &kp LA(D)   &none           &none   &kp LA(B)       &none    &kp LA(F)      &none
     &trans      &none       &none       &none       &none       &none           &none   &kp LA(LC(A))   &kp LA(LC(D))  &kp LA(LC(R))  &none  &trans
-                                        &to BASE    &trans      &trans          &trans      &trans      &trans
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                split_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "SPLT"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃ SPLIT UP  ┃           ┃           ┃
-//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃SPLIT LEFT ┃SPLIT DOWN ┃SPLIT RIGHT┃           ┃
-// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
-// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-
-                &trans      &trans      &none       &trans      &trans          &none       &none       &codspl UP  &none       &none
-                &trans      &trans      &none       &trans      &trans          &none       &codspl LEFT  &codspl DOWN  &codspl RIGHT  &none
-    &trans      &trans      &trans      &trans      &trans      &trans          &none       &none       &none       &none       &none       &trans
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
                 };
