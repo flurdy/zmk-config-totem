@@ -144,6 +144,22 @@
                <&macro_release &kp LSHFT>,
                <&macro_tap &kp DEL>;
         };
+        mc_emo: macro_emoji_prefix {
+            label = "EMOPRE";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp 1 &kp F>;
+        emo_lol macro_emoji_lol {
+            label = "EMOLOL";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp 1 &kp F>,
+                <&macro_tap &kp 9 &kp 2 &kp 3>;
+        };
 
     };
 
