@@ -90,21 +90,23 @@
     };
 
     macros {
-        vsc: vscode_cmd {
+        vsc: macro_vscode_cmd {
             label = "VSCCMD";
             #binding-cells = <1>;
             compatible = "zmk,behavior-macro-one-param";
             bindings =
-                <&kp LC(K)>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+                <&macro_tap &kp LC(K)>,
+                <&macro_param_1to1>,
+                <&macro_tap &kp MACRO_PLACEHOLDER>;
         };
         codspl: macro_vscode_split {
             label = "VSCSPLIT";
             #binding-cells = <1>;
             compatible = "zmk,behavior-macro-one-param";
             bindings =
-                <&kp LC(K)>,
-                <&macro_param_1to1 &kp LS(MACRO_PLACEHOLDER)>;
+                <&macro_tap &kp LC(K)>,
+                <&macro_param_1to1>,
+                <&macro_tap &kp LS(MACRO_PLACEHOLDER)>;
         };
         mc_rm2: macro_rmeta2 {
             label = "MCRMETA2";
@@ -112,9 +114,11 @@
             #binding-cells = <2>;
             bindings =
                <&macro_press &kp RGUI>,
-               <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+               <&macro_param_1to1>,
+               <&macro_tap &kp MACRO_PLACEHOLDER>,
                <&macro_release &kp RGUI>,
-               <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+               <&macro_param_2to1>,
+               <&macro_tap &kp MACRO_PLACEHOLDER>;
         };
         mc_sldl: macro_select_delete {
             label = "MCSELDEL";
@@ -122,7 +126,8 @@
             #binding-cells = <1>;
             bindings =
                <&macro_press &kp LSHFT>,
-               <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+               <&macro_param_1to1>,
+               <&macro_tap &kp MACRO_PLACEHOLDER>,
                <&macro_release &kp LSHFT>,
                <&macro_tap &kp DEL>;
         };
@@ -133,7 +138,8 @@
             bindings =
                <&macro_press &kp LSHFT>,
                <&macro_press &kp LCTRL>,
-               <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+               <&macro_param_1to1>,
+               <&macro_tap &kp MACRO_PLACEHOLDER>,
                <&macro_release &kp LCTRL>,
                <&macro_release &kp LSHFT>,
                <&macro_tap &kp DEL>;
