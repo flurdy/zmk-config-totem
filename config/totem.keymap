@@ -159,7 +159,7 @@
                 <&macro_tap &kp LC(LS(U))>,
                 <&macro_tap &kp N1 &kp F>;
         };
-        emo_lol macro_emoji_lol {
+        emo_lol: macro_emoji_lol {
             label = "EMOLOL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
