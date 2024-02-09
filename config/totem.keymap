@@ -270,7 +270,7 @@
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp LBRC &kp SPACE &kp UNDER &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp SPACE &kp RBRC>,
-                <&macro_tap &kp LEFT &kp LEFT;
+                <&macro_tap &kp LEFT &kp LEFT>;
         };
         mac_bua: macro_brckund_arrow   {
             label = "BRAARR";
@@ -285,7 +285,7 @@
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp LBKT &kp DOLLAR &kp LBRC &kp SPACE &kp RBRC &kp RBKT>,
-                <&macro_tap &kp LEFT &kp LEFT;
+                <&macro_tap &kp LEFT &kp LEFT>;
         };
         mac_bra: macro_brackets   {
             label = "BRACKS";
@@ -293,7 +293,7 @@
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp LPAR &kp LBRC &kp SPACE &kp RBRC &kp RPAR &kp SEMI>,
-                <&macro_tap &kp LEFT &kp LEFT &kp LEFT;
+                <&macro_tap &kp LEFT &kp LEFT &kp LEFT>;
         };
         mac_fbk: macro_cats_brack   {
             label = "TAGFIN";
@@ -329,7 +329,7 @@
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp S &kp DQT &kp SPACE &kp>,
-                <&macro_tap &kp LEFT &kp LEFT;
+                <&macro_tap &kp LEFT &kp LEFT>;
         };
 
     };
