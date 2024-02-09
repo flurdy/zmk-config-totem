@@ -196,7 +196,7 @@
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N9 &kp N1 &kp N4>;
         };
-        emo_pop: macro_emoji_pop   {
+        emo_pop: macro_emoji_pop {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -204,7 +204,7 @@
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N3 &kp N7 &kp F>;
         };
-        emo_shr: macro_emoji_shrug   {
+        emo_shr: macro_emoji_shrug {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -212,7 +212,7 @@
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N9 &kp N3 &kp N7>;
         };
-        emo_sho: macro_emoji_shook   {
+        emo_sho: macro_emoji_shook {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -220,7 +220,7 @@
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N6 &kp N2 &kp E>;
         };
-        emo_swe: macro_emoji_swear   {
+        emo_swe: macro_emoji_swear {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -228,13 +228,53 @@
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N9 &kp N2 &kp N6>;
         };
-        mac_tar: macro_thick_arrow   {
+        emo_sun: macro_emoji_sunglass {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N0 &kp E>;
+        };
+        emo_see: macro_emoji_nosee {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N4 &kp N8>;
+        };
+        emo_grm: macro_emoji_grimace {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N2 &kp C>;
+        };
+        emo_brw: macro_emoji_eyebrow {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N9 &kp N2 &kp N8>;
+        };
+        emo_lok: macro_emoji_look {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N4 &kp N4 &kp O>;
+        };
+        mac_tar: macro_thick_arrow {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp EQUAL &kp GT>;
         };
-        mac_rar: macro_right_arrow   {
+        mac_rar: macro_right_arrow {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -676,8 +716,8 @@ label= "EMJ"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &emo_pop   &trans       &trans      &emo_fpa    &emo_shr         &emo_thi   &trans      &trans      &trans      &trans
-                &trans      &trans      &emo_thu    &trans      &trans           &emo_lol   &trans      &emo_smi    &trans      &trans
+                &emo_pop   &trans       &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_b      &emo_grm    &trans      &trans
+                &trans      &trans      &emo_thu    &trans      &trans           &emo_lol   &trans      &emo_smi    &emo_sun    &emo_see
     &trans      &trans      &trans      &trans      &trans      &trans           &trans     &trans      &emo_uha    &emo_sho    &trans     &emo_swe
                                         &td_base    &trans      &trans           &trans     &trans      &trans
                         >;
