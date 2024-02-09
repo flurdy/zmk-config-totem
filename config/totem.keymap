@@ -30,7 +30,8 @@
 #define TERM 11
 #define QWER 12
 #define GAME 13
-#define BLUE 14
+#define EMOJ 14
+#define BLUE 15
 
 
 &mt {
@@ -151,14 +152,6 @@
                <&macro_release &kp LSHFT>,
                <&macro_tap &kp DEL>;
         };
-        mc_emo: macro_emoji_prefix {
-            label = "EMOPRE";
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>;
-        };
         emo_lol: macro_emoji_lol {
             label = "EMOLOL";
             #binding-cells = <0>;
@@ -167,6 +160,87 @@
                 <&macro_tap &kp LC(LS(U))>,
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N9 &kp N2 &kp N3>;
+        };
+        emo_thu: macro_emoji_thumb {
+            label = "EMOTHU";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N4 &kp N4 &kp D>;
+        };
+        emo_smi: macro_emoji_smile {
+            label = "EMOTHU";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N4 &kp N2>;
+        };
+        emo_fpa: macro_emoji_facepalm {
+            label = "EMOPAL";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N9 &kp N2 &kp N6>;
+        };
+        emo_uha: macro_emoji_unhappy {
+            label = "EMOPAL";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N4 &kp N1>;
+        };
+        emo_thi: macro_emoji_thinking   {
+            label = "EMOPAL";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N9 &kp N1 &kp N4>;
+        };
+        emo_pop: macro_emoji_pop   {
+            label = "EMOPAL";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N3 &kp N7 &kp F>;
+        };
+        emo_shr: macro_emoji_shrug   {
+            label = "EMOPAL";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N9 &kp N3 &kp N7>;
+        };
+        emo_sho: macro_emoji_shook   {
+            label = "EMOPAL";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N2 &kp E>;
+        };
+        emo_swe: macro_emoji_swear   {
+            label = "EMOPAL";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N9 &kp N2 &kp N6>;
         };
 
     };
@@ -523,6 +597,23 @@ label= "GAME"                              ;
                                        &td_base    &kp SPACE   &trans            &kp RET    &kp BSPC    &kp DEL
                         >;
                 };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                emoji_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "EMJ"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &emo_pop   &kp W       &kp F       &emo_fpa    &emo_shr          &emo_thi   &kp L       &kp O       &kp Y       &kp SQT
+                &kp A      &kp R       &emo_thu    &kp T       &kp G             &emo_lol   &kp N       &emo_smi    &kp I       &kp U
+    &trans      &kp Z      &kp X       &kp C       &kp D       &kp V             &kp K      &kp H       &emo_uha    &emo_sho     &trans     &emo_swe
+                                       &td_base    &kp SPACE   &trans            &kp RET    &kp BSPC    &kp DEL
+                        >;
+                };
+
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
                 bluetooth_layer {
