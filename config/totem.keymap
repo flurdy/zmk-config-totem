@@ -716,7 +716,7 @@ label= "EMJ"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &emo_pop   &trans       &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_b      &emo_grm    &trans      &trans
+                &emo_pop    &trans      &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_brw    &emo_grm    &trans      &trans
                 &trans      &trans      &emo_thu    &trans      &trans           &emo_lol   &trans      &emo_smi    &emo_sun    &emo_see
     &trans      &trans      &trans      &trans      &trans      &trans           &trans     &trans      &emo_uha    &emo_sho    &trans     &emo_swe
                                         &td_base    &trans      &trans           &trans     &trans      &trans
