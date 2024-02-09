@@ -248,21 +248,21 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_tap &kp EQUALS &kp GT>
+                <&macro_tap &kp EQUALS &kp GT>;
         };
         mac_rar: macro_right_arrow   {
             label = "THIARR";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_tap &kp MINUS &kp GT &kp SPACE>
+                <&macro_tap &kp MINUS &kp GT &kp SPACE>;
         };
         mac_lar: macro_left_arrow   {
             label = "THIARR";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_tap &kp LT &kp MINUS &kp SPACE>
+                <&macro_tap &kp LT &kp MINUS &kp SPACE>;
         };
         mac_uar: macro_under_arrow   {
             label = "UNDARR";
