@@ -482,7 +482,7 @@ label= "NAVI"                              ;
 
                 &none       &none       &none       &none       &none           &kp LC(HOME)  &kp HOME  &kp UP      &kp END     &kp PG_UP
        &mt LMETA LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &caps_word  &none  &kp LEFT   &kp DOWN    &kp RIGHT   &kp PG_DN
-    &kp BSPC    &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &kp LC(HOME)  &none     &kp LC(END)  &none      &none
+    &kp BSPC    &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &kp LC(HOME)  &none     &kp LC(END)  &none      &to NAVI
                                         &to BASE    &trans      &trans          &mo SELC    &kp LC(BSPC)  &kp LC(DEL)
                         >;
                 };
@@ -532,8 +532,8 @@ label= "NUMB"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1        &kp N2         &kp N3          &kp N4      &kp N5      &kp N6     &kp N7      &kp N8      &kp N9      &kp N0
-            &mt LGUI EXCL  &mt LALT EQUAL  &mt LSHFT MINUS   &mt LCTRL PLUS  &kp LT  &kp GT     &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp LGUI
-    &trans      &none         &none         &kp PERCENT     &kp STAR    &kp RA(Z)    &kp RA(X)  &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp DOT    &kp COMMA
+            &mt LGUI EXCL  &mt LALT EQUAL  &mt LSHFT MINUS   &mt LCTRL PLUS  &kp LT  &kp GT     &kp KP_N4   &kp KP_N5   &kp KP_N6   &mt LGUI COMMA
+    &trans      &none         &none         &kp PERCENT     &kp STAR    &kp RA(Z)    &kp RA(X)  &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp DOT    &to NUMB
                                              &to BASE        &trans      &trans      &trans     &trans      &kp KP_N0
                         >;
                 };
@@ -607,9 +607,9 @@ label= "MEDI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &td_lc      &none       &kp C_BRI_UP  &none     &td_sl          &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
-                &none       &none       &kp C_BRI_DN  &none     &none           &none       &kp C_PREV  &kp C_STOP  &kp C_NEXT  &kp C_VOL_UP
-    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &kp C_VOL_DN    &trans
-                                        &to BASE    &trans      &tog BLUE       &trans      &trans      &trans
+                &none       &none       &kp C_BRI_DN  &none     &none           &none       &kp C_PREV  &kp C_STOP  &kp C_NEXT  &none
+    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &none       &to MEDI
+                                        &to BASE    &trans      &tog BLUE       &trans      &kp C_VOL_DN  &kp C_VOL_UP
                         >;
                 };
 
@@ -800,7 +800,7 @@ label= "EMJ"                               ;
                 &emo_pop    &none       &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_brw    &emo_grm    &emo_non    &none
                 &none       &none       &emo_thu    &none       &none            &emo_lol   &emo_hap    &emo_smi    &emo_sun    &emo_see
     &trans      &emo_zzz    &emo_win    &emo_ton    &emo_drk    &emo_kis         &emo_wei   &none       &emo_uha    &emo_sho    &emo_ang     &emo_swe
-                                        &td_base    &trans      &trans           &trans     &trans      &trans
+                                        &to BASE    &trans      &trans           &trans     &trans      &trans
                         >;
                 };
 
@@ -825,7 +825,7 @@ label= "CSYM"                              ;
                 &none      &none       &mac_fbk    &mac_fun    &none             &none      &none       &none       &none       &none
                 &mac_uar   &mac_bua    &mac_tar    &mac_rar    &mac_lar          &mac_qot   &mac_iqt    &mac_dlb    &mac_bra    &none
     &trans      &none      &none       &none       &none       &none             &none      &none       &none       &none       &mac_hdr    &trans
-                                       &td_base    &trans      &trans            &trans     &trans      &trans
+                                       &to BASE    &trans      &trans            &trans     &trans      &trans
                         >;
                 };
 
