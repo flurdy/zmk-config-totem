@@ -31,7 +31,8 @@
 #define QWER 12
 #define GAME 13
 #define EMOJ 14
-#define BLUE 15
+#define CSYM 15
+#define BLUE 16
 
 
 &mt {
@@ -241,6 +242,94 @@
                 <&macro_tap &kp LC(LS(U))>,
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N9 &kp N2 &kp N6>;
+        };
+        mac_tar: macro_thick_arrow   {
+            label = "THIARR";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp EQUALS &kp GT>
+        };
+        mac_rar: macro_right_arrow   {
+            label = "THIARR";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp MINUS &kp GT &kp SPACE>
+        };
+        mac_lar: macro_left_arrow   {
+            label = "THIARR";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LT &kp MINUS &kp SPACE>
+        };
+        mac_uar: macro_under_arrow   {
+            label = "UNDARR";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LBRC &kp SPACE &kp UNDER &kp SPACE &kp EQUALS &kp GT &kp SPACE &kp SPACE &kp RBRC>,
+                <&macro_tap &kp LEFT &kp LEFT;
+        };
+        mac_bua: macro_brckund_arrow   {
+            label = "BRAARR";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp UNDER &kp SPACE &kp EQUALS &kp GT>;
+        };
+        mac_dlb: macro_dollar_brack   {
+            label = "DOLBRA";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LBKT &kp DOLLAR &kp LBRC &kp SPACE &kp RBRC &kp RBKT>,
+                <&macro_tap &kp LEFT &kp LEFT;
+        };
+        mac_bra: macro_brackets   {
+            label = "BRACKS";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LPAR &kp LBRC &kp SPACE &kp RBRC &kp RPAR &kp SEMI>,
+                <&macro_tap &kp LEFT &kp LEFT &kp LEFT;
+        };
+        mac_fbk: macro_cats_brack   {
+            label = "TAGFIN";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LBKT>,
+                <&macro_press LSHFT>,
+                <&macro_tap &kp F>,
+                <&macro_release LSHFT>,
+                <&macro_tap &kp RBKT>;
+        };
+        mac_fun: macro_tag_fin   {
+            label = "TAGFIN";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_press LSHFT>,
+                <&macro_tap &kp F>,
+                <&macro_release LSHFT>,
+                <&macro_tap &kp LBKT &kp UNDER &kp RBKT>;
+        };
+        mac_qot: macro_js_qoute   {
+            label = "JSQOUT";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp DQT &kp SPACE &kp DQT &kp COLON &kp SPACE &kp DQT &kp SPACE &kp DQT>;
+        };
+        mac_iqt: macro_int_qoute   {
+            label = "INTQOT";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp S &kp DQT &kp SPACE &kp>,
+                <&macro_tap &kp LEFT &kp LEFT;
         };
 
     };
@@ -607,10 +696,26 @@ label= "EMJ"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &emo_pop   &kp W       &kp F       &emo_fpa    &emo_shr          &emo_thi   &kp L       &kp O       &kp Y       &kp SQT
-                &kp A      &kp R       &emo_thu    &kp T       &kp G             &emo_lol   &kp N       &emo_smi    &kp I       &kp U
-    &trans      &kp Z      &kp X       &kp C       &kp D       &kp V             &kp K      &kp H       &emo_uha    &emo_sho     &trans     &emo_swe
-                                       &td_base    &kp SPACE   &trans            &kp RET    &kp BSPC    &kp DEL
+                &emo_pop   &trans       &trans      &emo_fpa    &emo_shr         &emo_thi   &trans      &trans      &trans      &trans
+                &trans      &trans      &emo_thu    &trans      &ktrans          &emo_lol   &trans      &emo_smi    &trans      &trans
+    &trans      &trans      &trans      &trans      &trans      &ktrans          &trans     &trans      &emo_uha    &emo_sho    &trans     &emo_swe
+                                        &td_base    &trans      &trans           &trans     &trans      &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                codesymbol_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "CSYM"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &none      &none       &mac_fbk    &mac_fun    &none             &none      &none       &none       &none       &none
+                &mac_uar   &mac_bua    &mac_tar    &mac_rar    &mac_lar          &mac_qot   &mac_iqt    &mac_dlb    &mac_bra    &none
+    &trans      &none      &none       &none       &none       &none             &none      &none       &none       &none       &trans     &trans
+                                       &td_base    &trans      &trans            &trans     &trans      &trans
                         >;
                 };
 
