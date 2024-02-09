@@ -246,50 +246,50 @@
             bindings =
                 <&macro_tap &kp LT &kp MINUS &kp SPACE>;
         };
-        mac_uar: macro_under_arrow   {
+        mac_uar: macro_under_arrow {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp LBRC &kp SPACE &kp UNDER &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp SPACE &kp RBRC>,
                 <&macro_tap &kp LEFT &kp LEFT>;
         };
-        mac_bua: macro_brckund_arrow   {
+        mac_bua: macro_brckund_arrow {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp UNDER &kp SPACE &kp EQUAL &kp GT>;
         };
-        mac_dlb: macro_dollar_brack   {
+        mac_dlb: macro_dollar_brack {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp LBKT &kp DOLLAR &kp LBRC &kp SPACE &kp RBRC &kp RBKT>,
                 <&macro_tap &kp LEFT &kp LEFT>;
         };
-        mac_bra: macro_brackets   {
+        mac_bra: macro_brackets {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp LPAR &kp LBRC &kp SPACE &kp RBRC &kp RPAR &kp SEMI>,
                 <&macro_tap &kp LEFT &kp LEFT &kp LEFT>;
         };
-        mac_fbk: macro_cats_brack   {
+        mac_fbk: macro_cats_brack {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp LBKT>,
-                <&macro_press LSHFT>,
+                <&macro_press &kp LSHFT>,
                 <&macro_tap &kp F>,
-                <&macro_release LSHFT>,
+                <&macro_release &kp LSHFT>,
                 <&macro_tap &kp RBKT>;
         };
-        mac_fun: macro_tag_fin   {
+        mac_fun: macro_tag_fin {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_press LSHFT>,
+                <&macro_press &kp LSHFT>,
                 <&macro_tap &kp F>,
-                <&macro_release LSHFT>,
+                <&macro_release &kp LSHFT>,
                 <&macro_tap &kp LBKT &kp UNDER &kp RBKT>;
         };
         mac_qot: macro_js_qoute   {
