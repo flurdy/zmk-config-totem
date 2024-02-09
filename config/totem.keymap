@@ -331,6 +331,13 @@
                 <&macro_tap &kp S &kp DQT &kp SPACE &kp>,
                 <&macro_tap &kp LEFT &kp LEFT>;
         };
+        mac_hdr: macro_home_dir   {
+            label = "HOMDIR";
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp TILDE &kp FSLH>;
+        };
 
     };
 
@@ -697,8 +704,8 @@ label= "EMJ"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &emo_pop   &trans       &trans      &emo_fpa    &emo_shr         &emo_thi   &trans      &trans      &trans      &trans
-                &trans      &trans      &emo_thu    &trans      &ktrans          &emo_lol   &trans      &emo_smi    &trans      &trans
-    &trans      &trans      &trans      &trans      &trans      &ktrans          &trans     &trans      &emo_uha    &emo_sho    &trans     &emo_swe
+                &trans      &trans      &emo_thu    &trans      &trans           &emo_lol   &trans      &emo_smi    &trans      &trans
+    &trans      &trans      &trans      &trans      &trans      &trans           &trans     &trans      &emo_uha    &emo_sho    &trans     &emo_swe
                                         &td_base    &trans      &trans           &trans     &trans      &trans
                         >;
                 };
@@ -714,7 +721,7 @@ label= "CSYM"                              ;
 
                 &none      &none       &mac_fbk    &mac_fun    &none             &none      &none       &none       &none       &none
                 &mac_uar   &mac_bua    &mac_tar    &mac_rar    &mac_lar          &mac_qot   &mac_iqt    &mac_dlb    &mac_bra    &none
-    &trans      &none      &none       &none       &none       &none             &none      &none       &none       &none       &trans     &trans
+    &trans      &none      &none       &none       &none       &none             &none      &none       &none       &none       &mac_hdr    &trans
                                        &td_base    &trans      &trans            &trans     &trans      &trans
                         >;
                 };
