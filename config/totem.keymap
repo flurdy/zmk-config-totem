@@ -100,7 +100,6 @@
 
     macros {
         vsc: macro_vscode_cmd {
-            label = "VSCCMD";
             #binding-cells = <1>;
             compatible = "zmk,behavior-macro-one-param";
             bindings =
@@ -109,7 +108,6 @@
                 <&macro_tap &kp MACRO_PLACEHOLDER>;
         };
         codspl: macro_vscode_split {
-            label = "VSCSPLIT";
             #binding-cells = <1>;
             compatible = "zmk,behavior-macro-one-param";
             bindings =
@@ -118,7 +116,6 @@
                 <&macro_tap &kp LS(MACRO_PLACEHOLDER)>;
         };
         mc_rm2: macro_rmeta2 {
-            label = "MCRMETA2";
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
@@ -130,7 +127,6 @@
                <&macro_tap &kp MACRO_PLACEHOLDER>;
         };
         mc_sldl: macro_select_delete {
-            label = "MCSELDEL";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -141,7 +137,6 @@
                <&macro_tap &kp DEL>;
         };
         mc_csldl: macro_ctrsel_del {
-            label = "MCCSLDEL";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -154,7 +149,6 @@
                <&macro_tap &kp DEL>;
         };
         emo_lol: macro_emoji_lol {
-            label = "EMOLOL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -163,7 +157,6 @@
                 <&macro_tap &kp N9 &kp N2 &kp N3>;
         };
         emo_thu: macro_emoji_thumb {
-            label = "EMOTHU";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -172,7 +165,6 @@
                 <&macro_tap &kp N4 &kp N4 &kp D>;
         };
         emo_smi: macro_emoji_smile {
-            label = "EMOTHU";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -181,7 +173,6 @@
                 <&macro_tap &kp N6 &kp N4 &kp N2>;
         };
         emo_fpa: macro_emoji_facepalm {
-            label = "EMOPAL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -190,7 +181,6 @@
                 <&macro_tap &kp N9 &kp N2 &kp N6>;
         };
         emo_uha: macro_emoji_unhappy {
-            label = "EMOPAL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -199,7 +189,6 @@
                 <&macro_tap &kp N6 &kp N4 &kp N1>;
         };
         emo_thi: macro_emoji_thinking   {
-            label = "EMOPAL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -208,7 +197,6 @@
                 <&macro_tap &kp N9 &kp N1 &kp N4>;
         };
         emo_pop: macro_emoji_pop   {
-            label = "EMOPAL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -217,7 +205,6 @@
                 <&macro_tap &kp N3 &kp N7 &kp F>;
         };
         emo_shr: macro_emoji_shrug   {
-            label = "EMOPAL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -226,7 +213,6 @@
                 <&macro_tap &kp N9 &kp N3 &kp N7>;
         };
         emo_sho: macro_emoji_shook   {
-            label = "EMOPAL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -235,7 +221,6 @@
                 <&macro_tap &kp N6 &kp N2 &kp E>;
         };
         emo_swe: macro_emoji_swear   {
-            label = "EMOPAL";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -244,28 +229,24 @@
                 <&macro_tap &kp N9 &kp N2 &kp N6>;
         };
         mac_tar: macro_thick_arrow   {
-            label = "THIARR";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp EQUAL &kp GT>;
         };
         mac_rar: macro_right_arrow   {
-            label = "THIARR";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp MINUS &kp GT &kp SPACE>;
         };
         mac_lar: macro_left_arrow   {
-            label = "THIARR";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp LT &kp MINUS &kp SPACE>;
         };
         mac_uar: macro_under_arrow   {
-            label = "UNDARR";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -273,14 +254,12 @@
                 <&macro_tap &kp LEFT &kp LEFT>;
         };
         mac_bua: macro_brckund_arrow   {
-            label = "BRAARR";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp UNDER &kp SPACE &kp EQUAL &kp GT>;
         };
         mac_dlb: macro_dollar_brack   {
-            label = "DOLBRA";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -288,7 +267,6 @@
                 <&macro_tap &kp LEFT &kp LEFT>;
         };
         mac_bra: macro_brackets   {
-            label = "BRACKS";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -296,7 +274,6 @@
                 <&macro_tap &kp LEFT &kp LEFT &kp LEFT>;
         };
         mac_fbk: macro_cats_brack   {
-            label = "TAGFIN";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -307,7 +284,6 @@
                 <&macro_tap &kp RBKT>;
         };
         mac_fun: macro_tag_fin   {
-            label = "TAGFIN";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -317,22 +293,19 @@
                 <&macro_tap &kp LBKT &kp UNDER &kp RBKT>;
         };
         mac_qot: macro_js_qoute   {
-            label = "JSQOUT";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap &kp DQT &kp SPACE &kp DQT &kp COLON &kp SPACE &kp DQT &kp SPACE &kp DQT>;
         };
         mac_iqt: macro_int_qoute   {
-            label = "INTQOT";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_tap &kp S &kp DQT &kp SPACE &kp>,
+                <&macro_tap &kp S &kp DQT &kp SPACE &kp DQT>,
                 <&macro_tap &kp LEFT &kp LEFT>;
         };
         mac_hdr: macro_home_dir   {
-            label = "HOMDIR";
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
@@ -716,6 +689,15 @@ label= "EMJ"                              ;
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 label= "CSYM"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃           ┃           ┃    [F]    ┃   F[_]    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃ { __ => } ┃  __ =>    ┃    =>     ┃     ->    ┃     <-    ┃   ┃   "": ""  ┃   s" "    ┃   [${ }]  ┃   ({ });  ┃           ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃    ~/     ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
