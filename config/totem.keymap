@@ -300,6 +300,14 @@
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp A &kp E &kp N4>;
         };
+        emo_kis: macro_emoji_kiss {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N1 &kp N8>;
+        };
         emo_ton: macro_emoji_tong {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
@@ -777,12 +785,21 @@ label= "GAME"                              ;
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 label= "EMJ"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃  POPCORN  ┃           ┃    EYES   ┃ FACEPALM  ┃   SHRUG   ┃   ┃  THINK    ┃ EYE BROW  ┃  GRIMACE  ┃  NOTHING  ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃           ┃           ┃  THUMB UP ┃           ┃           ┃   ┃   ROFL    ┃   LAUGH   ┃  SMILE    ┃   COOL    ┃  NO SEE   ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃   SLEEP   ┃   WINK    ┃   TONGUE  ┃   DRUNK   ┃   KISS    ┃   ┃   WEIRD   ┃           ┃   SAD     ┃   SHOOK   ┃  ANGRY    ┃   SWEAR   ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &emo_pop    &trans      &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_brw    &emo_grm    &emo_non    &trans
-                &trans      &trans      &emo_thu    &trans      &trans           &emo_lol   &emo_hap    &emo_smi    &emo_sun    &emo_see
-    &trans      &emo_zzz    &emo_win    &emo_win    &emo_ton    &trans           &emo_wei   &trans      &emo_uha    &emo_sho    &emo_ang     &emo_swe
+                &emo_pop    &none       &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_brw    &emo_grm    &emo_non    &none
+                &none       &none       &emo_thu    &none       &none            &emo_lol   &emo_hap    &emo_smi    &emo_sun    &emo_see
+    &trans      &emo_zzz    &emo_win    &emo_ton    &emo_drk    &emo_kis         &emo_wei   &none       &emo_uha    &emo_sho    &emo_ang     &emo_swe
                                         &td_base    &trans      &trans           &trans     &trans      &trans
                         >;
                 };
