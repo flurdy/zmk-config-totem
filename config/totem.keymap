@@ -268,6 +268,70 @@
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N4 &kp N4 &kp O>;
         };
+        emo_drk: macro_emoji_drunk {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N9 &kp N2 &kp A>;
+        };
+        emo_hap: macro_emoji_happy {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N0 &kp N4>;
+        };
+        emo_ang: macro_emoji_angry {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N2 &kp N1>;
+        };
+        emo_wei: macro_emoji_weird {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp A &kp E &kp N4>;
+        };
+        emo_ton: macro_emoji_tong {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N1 &kp C>;
+        };
+        emo_win: macro_emoji_wink {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N0 &kp N9>;
+        };
+        emo_zzz: macro_emoji_sleep {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N3 &kp N4>;
+        };
+        emo_non: macro_emoji_nothing {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings =
+                <&macro_tap &kp LC(LS(U))>,
+                <&macro_tap &kp N1 &kp F>,
+                <&macro_tap &kp N6 &kp N1 &kp N0>;
+        };
         mac_tar: macro_thick_arrow {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
@@ -437,7 +501,7 @@ label= "SYMB"                              ;
                 &kp LS(LA(0)) &kp HASH  &kp POUND   &kp CARET   &kp LBKT        &kp RBKT    &none       &none       &kp RALT    &kp RGUI
        &mt LGUI PIPE  &mt LALT AT  &mt LSHFT UNDER  &mt LCTRL GRAVE  &kp LPAR   &kp RPAR  &mt LCTRL DQT  &mt LSHFT COLON  &mt LALT SEMI  &kp LGUI
     &none       &kp BSLH    &kp TILDE   &kp AMPS    &kp DLLR    &kp LBRC        &kp RBRC    &none       &none       &kp RA(LSHFT)  &kp QMARK   &none
-                                        &to BASE    &trans      &none           &trans      &trans      &trans
+                                        &to BASE    &mo CSYM    &mo EMOJ        &trans      &trans      &trans
                         >;
                 };
 
@@ -711,14 +775,14 @@ label= "GAME"                              ;
 
                 emoji_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "EMJ"                              ;
+label= "EMJ"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &emo_pop    &trans      &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_brw    &emo_grm    &trans      &trans
-                &trans      &trans      &emo_thu    &trans      &trans           &emo_lol   &trans      &emo_smi    &emo_sun    &emo_see
-    &trans      &trans      &trans      &trans      &trans      &trans           &trans     &trans      &emo_uha    &emo_sho    &trans     &emo_swe
+                &emo_pop    &trans      &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_brw    &emo_grm    &emo_non    &trans
+                &trans      &trans      &emo_thu    &trans      &trans           &emo_lol   &emo_hap    &emo_smi    &emo_sun    &emo_see
+    &trans      &emo_zzz    &emo_win    &emo_win    &emo_ton    &trans           &emo_wei   &trans      &emo_uha    &emo_sho    &emo_ang     &emo_swe
                                         &td_base    &trans      &trans           &trans     &trans      &trans
                         >;
                 };
