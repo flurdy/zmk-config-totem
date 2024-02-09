@@ -248,7 +248,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_tap &kp EQUALS &kp GT>;
+                <&macro_tap &kp EQUAL &kp GT>;
         };
         mac_rar: macro_right_arrow   {
             label = "THIARR";
@@ -269,7 +269,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_tap &kp LBRC &kp SPACE &kp UNDER &kp SPACE &kp EQUALS &kp GT &kp SPACE &kp SPACE &kp RBRC>,
+                <&macro_tap &kp LBRC &kp SPACE &kp UNDER &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp SPACE &kp RBRC>,
                 <&macro_tap &kp LEFT &kp LEFT;
         };
         mac_bua: macro_brckund_arrow   {
@@ -277,7 +277,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_tap &kp UNDER &kp SPACE &kp EQUALS &kp GT>;
+                <&macro_tap &kp UNDER &kp SPACE &kp EQUAL &kp GT>;
         };
         mac_dlb: macro_dollar_brack   {
             label = "DOLBRA";
