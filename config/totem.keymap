@@ -508,7 +508,7 @@ label= "SYMB"                              ;
 
                 &kp LS(LA(0)) &kp HASH  &kp POUND   &kp CARET   &kp LBKT        &kp RBKT    &none       &none       &kp RALT    &kp RGUI
        &mt LGUI PIPE  &mt LALT AT  &mt LSHFT UNDER  &mt LCTRL GRAVE  &kp LPAR   &kp RPAR  &mt LCTRL DQT  &mt LSHFT COLON  &mt LALT SEMI  &kp LGUI
-    &none       &kp BSLH    &kp TILDE   &kp AMPS    &kp DLLR    &kp LBRC        &kp RBRC    &none       &none       &kp RA(LSHFT)  &kp QMARK   &none
+    &none       &kp BSLH    &kp TILDE   &kp AMPS    &kp DLLR    &kp LBRC        &kp RBRC    &none       &none       &kp RA(LSHFT)  &kp QMARK   &to SYMB
                                         &to BASE    &mo CSYM    &mo EMOJ        &trans      &trans      &trans
                         >;
                 };
@@ -558,7 +558,7 @@ label= "FUNC"                              ;
 
                 &kp PAUSE_BREAK &kp SLCK &kp KP_NUM &kp PSCRN   &kp CAPS        &none       &kp F7      &kp F8      &kp F9      &kp F12
                 &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp INS         &none       &kp F4      &kp F5      &kp F6      &kp F11
-    &trans      &none       &none       &none       &none       &none           &none       &kp F1      &kp F2      &kp F3      &kp F10     &trans
+    &trans      &none       &none       &none       &none       &none           &none       &kp F1      &kp F2      &kp F3      &kp F10     &to FUNC
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
                 };
@@ -633,7 +633,7 @@ label= "TILE"                              ;
 
                 &kp LG(LC(ESC))  &kp LG(LS(ESC))  &none  &none  &kp LG(GRAVE)   &none  &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
                 &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp LG(LS(GRAVE))  &none  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
-    &none       &none       &kp LCTRL   &kp LSHFT   &kp LALT    &none           &none       &none       &none         &none       &none       &none
+    &none       &none       &kp LCTRL   &kp LSHFT   &kp LALT    &none           &none       &none       &none         &none       &none       &to TILE
                                         &to BASE    &trans      &trans          &mo TSIZ    &trans      &trans
                         >;
                 };
@@ -708,7 +708,7 @@ label= "SELC"                              ;
 
           &mc_csldl HOME  &mc_sldl HOME  &none  &mc_sldl END  &mc_csldl END   &kp LC(LS(HOME))  &kp LS(HOME)  &none  &kp LS(END)  &kp LC(LS(END))
                 &none       &kp LC(BSPC)  &none     &kp LC(DEL)  &none          &none   &kp LC(LS(LEFT))  &none    &kp LC(LS(RIGHT))  &none
-    &trans      &none       &none       &none       &mc_csldl END  &none        &none       &none       &none      &kp LC(LS(END))  &none    &trans
+    &trans      &none       &none       &none       &mc_csldl END  &none        &none       &none       &none      &kp LC(LS(END))  &none    &to SELC
                                         &to BASE    &trans      &trans          &trans      &mo TERM    &trans
                         >;
                 };
@@ -733,7 +733,7 @@ label= "TERM"                              ;
 
                 &none       &kp LC(U)   &none       &kp LC(K)   &none           &none   &kp LC(A)       &none    &kp LC(E)      &none
                 &none       &kp LC(W)   &none       &kp LA(D)   &none           &none   &kp LA(B)       &none    &kp LA(F)      &none
-    &trans      &none       &none       &none       &none       &none           &none   &kp LA(LC(A))   &kp LA(LC(D))  &kp LA(LC(R))  &none  &trans
+    &trans      &none       &none       &none       &none       &none           &none   &kp LA(LC(A))   &kp LA(LC(D))  &kp LA(LC(R))  &none  &to TERM
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
                 };
