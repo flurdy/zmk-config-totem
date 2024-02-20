@@ -486,14 +486,14 @@ label= "BASE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃    BSPC   ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃    LOCK   ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    ESC    ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    DEL    ┃
+//                                     ┃           ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    DEL    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃   RMETA   ┃   RALT    ┃   RSHFT   ┃   RCTRL   ┃           ┃   ┃           ┃    ^R     ┃    ⇧R     ┃    ⌥R     ┃     NOR   ┃
+//             ┃   RMETA   ┃   RALT    ┃   RSHFT   ┃   RCTRL   ┃           ┃   ┃           ┃   RCTRL   ┃   RSHFT   ┃    RALT   ┃     NOR   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   LMETA   ┃   LALT    ┃   LSHFT   ┃   LCTRL   ┃           ┃   ┃           ┃     ^     ┃     ⇧     ┃    ⎇     ┃     ⌘     ┃
+//             ┃   LMETA   ┃   LALT    ┃   LSHFT   ┃   LCTRL   ┃           ┃   ┃           ┃   LCTRL   ┃   LSHFT   ┃    LALT   ┃   LMETA   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   LSHFT   ┃   FUN     ┃   COMP    ┃   MEH     ┃   HYP     ┃           ┃   ┃           ┃    HYP    ┃    MEH    ┃     ⎄     ┃    MED    ┃   LSHFT   ┃
+// ┃   LSHFT   ┃   FUN     ┃   COMP    ┃   MEH     ┃   HYP     ┃           ┃   ┃           ┃    HYP    ┃    MEH    ┃    COMP   ┃    MED    ┃   LSHFT   ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    TILE   ┃    NUM    ┃    NAV    ┃   ┃    SYM    ┃   LSHFT   ┃   CODE    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -503,7 +503,7 @@ label= "BASE"                              ;
                 &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &lt NORW SQT
                 &mt LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T    &kp G          &kp M        &mt LCTRL N &mt LSHFT E &mt LALT I  &mt LGUI U
     &mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LGUI))) D  &kp V  &kp K  &mt LS(LA(LC(LGUI))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &lt MEDI FSLH  &td_lcsh
-                                        &lt TILE ESC  &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &mt LSHFT BSPC  &lt CODE DEL
+                                        &mo TILE   &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &mt LSHFT BSPC  &lt CODE DEL
                         >;
                 };
 
