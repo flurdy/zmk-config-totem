@@ -84,7 +84,7 @@
 
         td_no: tap_dance_none {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&kp>;
         };
@@ -94,20 +94,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo MEDI>, <&kp K_LOCK>;
-        };
-
-        td_spup: tap_dance_splitup {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LA(LC(LS(UP)))>, <&codspl UP>;
-        };
-
-        td_spdn: tap_dance_splitdown {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LA(LC(LS(DOWN)))>, <&codspl DOWN>;
         };
 
         mt_split: mod_tap_split {
@@ -585,12 +571,13 @@ label= "SYMB"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp LS(LA(0)) &kp HASH  &kp POUND   &kp CARET   &kp LBKT        &kp RBKT    &none       &none       &kp RALT    &kp RGUI
-       &mt LGUI PIPE  &mt LALT AT  &mt LSHFT UNDER  &mt LCTRL GRAVE  &kp LPAR   &kp RPAR  &mt LCTRL DQT  &mt LSHFT COLON  &mt LALT SEMI  &kp LGUI
-    &none       &kp BSLH    &kp TILDE   &kp AMPS    &kp DLLR    &kp LBRC        &kp RBRC    &none       &none       &kp RA(LSHFT)  &kp QMARK   &none
+       &mt LGUI LS(NUBS)  &mt LALT DQT  &mt LSHFT UNDER  &mt LCTRL GRAVE  &kp LPAR   &kp RPAR  &mt LCTRL AT  &mt LSHFT COLON  &mt LALT SEMI  &kp LGUI
+    &none       &kp NUBS    &kp PIPE   &kp AMPS    &kp DLLR    &kp LBRC        &kp RBRC    &none       &none       &kp RA(LSHFT)  &kp QMARK   &none
                                         &to BASE    &mo CSYM    &mo EMOJ        &trans      &trans      &trans
                         >;
                 };
 
+)
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
                 number_layer {
@@ -610,7 +597,7 @@ label= "NUMB"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1        &kp N2         &kp N3          &kp N4      &kp N5      &kp N6     &kp N7      &kp N8      &kp N9   &kp N0
-            &mt LGUI EXCL  &mt LALT EQUAL  &mt LSHFT MINUS   &mt LCTRL PLUS  &kp LT  &kp GT     &kp N4      &kp N5      &kp N6   &mt LGUI COMMA
+            &mt LGUI LS(N1)  &mt LALT EQUALS  &mt LSHFT MINUS   &mt LCTRL LS(EQUALS)  &kp LT  &kp GT     &kp N4      &kp N5      &kp N6   &mt LGUI COMMA
     &trans      &none         &none         &kp PERCENT     &kp STAR    &kp RA(Z)    &kp RA(X)  &kp N1      &kp N2      &kp N3   &kp DOT    &none
                                              &to BASE        &trans      &trans      &trans     &kp SPACE   &kp N0
                         >;
@@ -684,7 +671,7 @@ label= "MEDI"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &td_no K_LOCK  &none    &kp C_BRI_UP  &none     &td_no C_SLEEP  &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
+                &td_no 0 K_LOCK  &none    &kp C_BRI_UP  &none     &td_no 0 C_SLEEP  &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
                 &none       &none       &kp C_BRI_DN  &none     &none           &none       &kp C_PREV  &kp C_STOP  &kp C_NEXT  &none
     &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &none       &none
                                         &to BASE    &trans      &mo BLUE        &trans      &kp C_VOL_DN  &kp C_VOL_UP
