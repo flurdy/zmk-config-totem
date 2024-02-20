@@ -596,7 +596,7 @@ label= "NUMB"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1        &kp N2         &kp N3          &kp N4      &kp N5      &kp N6     &kp N7      &kp N8      &kp N9   &kp N0
-            &mt LGUI LS(N1)  &mt LALT EQUALS  &mt LSHFT MINUS   &mt LCTRL LS(EQUALS)  &kp LT  &kp GT     &kp N4      &kp N5      &kp N6   &mt LGUI COMMA
+            &mt LGUI LS(N1)  &mt LALT EQUAL  &mt LSHFT MINUS   &mt LCTRL LS(EQUAL)  &kp LT  &kp GT  &kp N4    &kp N5  &kp N6   &mt LGUI COMMA
     &trans      &none         &none         &kp PERCENT     &kp STAR    &kp RA(Z)    &kp RA(X)  &kp N1      &kp N2      &kp N3   &kp DOT    &none
                                              &to BASE        &trans      &trans      &trans     &kp SPACE   &kp N0
                         >;
