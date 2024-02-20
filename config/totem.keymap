@@ -43,6 +43,14 @@
 
 / {
     behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
         td_sl: tap_dance_sleep {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -502,7 +510,7 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷             ╷         ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &lt NORW SQT
-                &mt LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T    &kp G          &kp M        &mt LCTRL N &mt LSHFT E &mt LALT I  &mt LGUI U
+                &hm LGUI A  &hm LALT R  &hm LSHFT S &hm LCTRL T    &kp G          &kp M        &hm LCTRL N &hm LSHFT E &hm LALT I  &hm LGUI U
     &mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LGUI))) D  &kp V  &kp K  &mt LS(LA(LC(LGUI))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &lt MEDI FSLH  &td_lcsh
                                         &mo TILE   &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &mt LSHFT BSPC  &lt CODE DEL
                         >;
