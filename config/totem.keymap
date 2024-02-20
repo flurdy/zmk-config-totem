@@ -57,18 +57,6 @@
             tapping-term-ms = <200>;
             bindings = <&none>, <&kp K_LOCK>;
         };
-        td_rs: tap_dance_reset {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&sys_reset>;
-        };
-        td_bo: tap_dance_boot {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&bootloader>;
-        };
         td_spup: tap_dance_splitup {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -482,7 +470,7 @@ label= "NAVI"                              ;
 
                 &none       &none       &none       &none       &none           &kp LC(HOME)  &kp HOME  &kp UP      &kp END     &kp PG_UP
        &mt LMETA LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &caps_word  &none  &kp LEFT   &kp DOWN    &kp RIGHT   &kp PG_DN
-    &kp BSPC    &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &kp LC(HOME)  &none     &kp LC(END)  &none      &to NAVI
+    &kp BSPC    &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &kp LC(HOME)  &none     &kp LC(END)  &none      &none
                                         &to BASE    &trans      &trans          &mo SELC    &kp LC(BSPC)  &kp LC(DEL)
                         >;
                 };
@@ -508,7 +496,7 @@ label= "SYMB"                              ;
 
                 &kp LS(LA(0)) &kp HASH  &kp POUND   &kp CARET   &kp LBKT        &kp RBKT    &none       &none       &kp RALT    &kp RGUI
        &mt LGUI PIPE  &mt LALT AT  &mt LSHFT UNDER  &mt LCTRL GRAVE  &kp LPAR   &kp RPAR  &mt LCTRL DQT  &mt LSHFT COLON  &mt LALT SEMI  &kp LGUI
-    &none       &kp BSLH    &kp TILDE   &kp AMPS    &kp DLLR    &kp LBRC        &kp RBRC    &none       &none       &kp RA(LSHFT)  &kp QMARK   &to SYMB
+    &none       &kp BSLH    &kp TILDE   &kp AMPS    &kp DLLR    &kp LBRC        &kp RBRC    &none       &none       &kp RA(LSHFT)  &kp QMARK   &none
                                         &to BASE    &mo CSYM    &mo EMOJ        &trans      &trans      &trans
                         >;
                 };
@@ -533,7 +521,7 @@ label= "NUMB"                              ;
 
                 &kp N1        &kp N2         &kp N3          &kp N4      &kp N5      &kp N6     &kp N7      &kp N8      &kp N9      &kp N0
             &mt LGUI EXCL  &mt LALT EQUAL  &mt LSHFT MINUS   &mt LCTRL PLUS  &kp LT  &kp GT     &kp KP_N4   &kp KP_N5   &kp KP_N6   &mt LGUI COMMA
-    &trans      &none         &none         &kp PERCENT     &kp STAR    &kp RA(Z)    &kp RA(X)  &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp DOT    &to NUMB
+    &trans      &none         &none         &kp PERCENT     &kp STAR    &kp RA(Z)    &kp RA(X)  &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp DOT    &none
                                              &to BASE        &trans      &trans      &trans     &trans      &kp KP_N0
                         >;
                 };
@@ -558,7 +546,7 @@ label= "FUNC"                              ;
 
                 &kp PAUSE_BREAK &kp SLCK &kp KP_NUM &kp PSCRN   &kp CAPS        &none       &kp F7      &kp F8      &kp F9      &kp F12
                 &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp INS         &none       &kp F4      &kp F5      &kp F6      &kp F11
-    &trans      &none       &none       &none       &none       &none           &none       &kp F1      &kp F2      &kp F3      &kp F10     &to FUNC
+    &trans      &none       &none       &none       &none       &none           &none       &kp F1      &kp F2      &kp F3      &kp F10     &none
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
                 };
@@ -608,8 +596,8 @@ label= "MEDI"                              ;
 
                 &td_lc      &none       &kp C_BRI_UP  &none     &td_sl          &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
                 &none       &none       &kp C_BRI_DN  &none     &none           &none       &kp C_PREV  &kp C_STOP  &kp C_NEXT  &none
-    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &none       &to MEDI
-                                        &to BASE    &trans      &tog BLUE       &trans      &kp C_VOL_DN  &kp C_VOL_UP
+    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &none       &none
+                                        &to BASE    &trans      &mo BLUE        &trans      &kp C_VOL_DN  &kp C_VOL_UP
                         >;
                 };
 
@@ -633,7 +621,7 @@ label= "TILE"                              ;
 
                 &kp LG(LC(ESC))  &kp LG(LS(ESC))  &none  &none  &kp LG(GRAVE)   &none  &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
                 &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp LG(LS(GRAVE))  &none  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
-    &none       &none       &kp LCTRL   &kp LSHFT   &kp LALT    &none           &none       &none       &none         &none       &none       &to TILE
+    &none       &none       &kp LCTRL   &kp LSHFT   &kp LALT    &none           &none       &none       &none         &none       &none       &none
                                         &to BASE    &trans      &trans          &mo TSIZ    &trans      &trans
                         >;
                 };
@@ -708,7 +696,7 @@ label= "SELC"                              ;
 
           &mc_csldl HOME  &mc_sldl HOME  &none  &mc_sldl END  &mc_csldl END   &kp LC(LS(HOME))  &kp LS(HOME)  &none  &kp LS(END)  &kp LC(LS(END))
                 &none       &kp LC(BSPC)  &none     &kp LC(DEL)  &none          &none   &kp LC(LS(LEFT))  &none    &kp LC(LS(RIGHT))  &none
-    &trans      &none       &none       &none       &mc_csldl END  &none        &none       &none       &none      &kp LC(LS(END))  &none    &to SELC
+    &trans      &none       &none       &none       &mc_csldl END  &none        &none       &none       &none      &kp LC(LS(END))  &none    &none
                                         &to BASE    &trans      &trans          &trans      &mo TERM    &trans
                         >;
                 };
@@ -733,7 +721,7 @@ label= "TERM"                              ;
 
                 &none       &kp LC(U)   &none       &kp LC(K)   &none           &none   &kp LC(A)       &none    &kp LC(E)      &none
                 &none       &kp LC(W)   &none       &kp LA(D)   &none           &none   &kp LA(B)       &none    &kp LA(F)      &none
-    &trans      &none       &none       &none       &none       &none           &none   &kp LA(LC(A))   &kp LA(LC(D))  &kp LA(LC(R))  &none  &to TERM
+    &trans      &none       &none       &none       &none       &none           &none   &kp LA(LC(A))   &kp LA(LC(D))  &kp LA(LC(R))  &none  &none
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
                 };
@@ -774,7 +762,7 @@ label= "GAME"                              ;
 
                 &kp Q      &kp W       &kp F       &kp P       &kp B             &kp J      &kp L       &kp O       &kp Y       &kp SQT
                 &kp A      &kp R       &kp S       &kp T       &kp G             &kp M      &kp N       &kp E       &kp I       &kp U
-    &trans      &kp Z      &kp X       &kp C       &kp D       &kp V             &kp K      &kp H       &kp COMMA   &kp DOT     &trans     &trans
+    &kp LSHFT   &kp Z      &kp X       &kp C       &kp D       &kp V             &kp K      &kp H       &kp COMMA   &kp DOT     &trans     &kp LCTRL
                                        &td_base    &kp SPACE   &trans            &kp RET    &kp BSPC    &kp DEL
                         >;
                 };
@@ -840,17 +828,17 @@ label= "BLUE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃ BT SEL 0  ┃ BT SEL 1  ┃ BT SEL 2  ┃ BT SEL 3  ┃           ┃   ┃  BT CLEAR ┃           ┃  BT PREV  ┃           ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃   RESET   ┃           ┃  OUT TOG  ┃           ┃  BOOTLOAD ┃   ┃ BOOTLOAD  ┃           ┃           ┃           ┃   RESET   ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃  OUT TOG  ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-             &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &none  &bt BT_CLR_ALL  &none  &bt BT_NXT  &none      &none
-             &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &none  &bt BT_CLR     &none      &bt BT_PRV   &none      &none
-    &none       &td_rs         &none     &out OUT_TOG   &none     &td_bo        &td_bo      &none      &none        &none      &td_rs    &none
-                                         &to BASE       &trans   &trans         &trans      &trans     &trans
+             &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &none   &bt BT_CLR_ALL  &none  &bt BT_NXT   &none      &none
+             &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &none   &bt BT_CLR  &none      &bt BT_PRV   &none      &none
+    &none       &none        &none       &none          &none    &out OUT_TOG    &none       &none      &none        &none      &none     &none
+                                         &to BASE       &trans   &trans          &trans      &trans     &trans
                         >;
                 };
 
