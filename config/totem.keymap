@@ -43,7 +43,7 @@
 
 / {
     behaviors {
-        hml: homerow_mods {
+        hml: homerow_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <100>;
@@ -54,7 +54,7 @@
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31>;
         };
 
-        hmr: homerow_mods {
+        hmr: homerow_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -82,18 +82,11 @@
             bindings = <&mt>, <&kp>;
         };
 
-        td_sl: tap_dance_sleep {
+        td_no: tap_dance_none {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&kp C_SLEEP>;
-        };
-
-        td_lc: tap_dance_lock {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&kp K_LOCK>;
+            bindings = <&none>, <&kp>;
         };
 
         td_lcsh: tap_shift_lock {
@@ -691,7 +684,7 @@ label= "MEDI"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &td_lc      &none       &kp C_BRI_UP  &none     &td_sl          &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
+                &td_no K_LOCK  &none    &kp C_BRI_UP  &none     &td_no C_SLEEP  &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
                 &none       &none       &kp C_BRI_DN  &none     &none           &none       &kp C_PREV  &kp C_STOP  &kp C_NEXT  &none
     &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &none       &none
                                         &to BASE    &trans      &mo BLUE        &trans      &kp C_VOL_DN  &kp C_VOL_UP
