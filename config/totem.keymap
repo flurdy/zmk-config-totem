@@ -43,14 +43,45 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        hml: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "tap-unless-interrupted";
+     //      flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31>
+        };
+
+        hmr: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25>
         };
+
+        lt_qk: layer_quick {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            bindings = <&lt>, <&kp>;
+        };
+
+        mt_qk: mod_quick {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            bindings = <&mt>, <&kp>;
+        };
+
         td_sl: tap_dance_sleep {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -69,7 +100,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&kp K_LOCK>;
+            bindings = <&mo MEDI>, <&kp K_LOCK>;
         };
 
         td_spup: tap_dance_splitup {
@@ -502,7 +533,7 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃   LMETA   ┃   LALT    ┃   LSHFT   ┃   LCTRL   ┃           ┃   ┃           ┃   LCTRL   ┃   LSHFT   ┃    LALT   ┃   LMETA   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   LSHFT   ┃   FUN     ┃   COMP    ┃   MEH     ┃   HYP     ┃           ┃   ┃           ┃    HYP    ┃    MEH    ┃    COMP   ┃    MED    ┃   LSHFT   ┃
+// ┃   LSHFT   ┃   FUN     ┃   COMP    ┃   MEH     ┃   HYP     ┃           ┃   ┃           ┃    HYP    ┃    MEH    ┃    COMP   ┃           ┃   MEDI    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    TILE   ┃    NUM    ┃    NAV    ┃   ┃    SYM    ┃   LSHFT   ┃   CODE    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -510,9 +541,9 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷             ╷         ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &lt NORW SQT
-                &hm LGUI A  &hm LALT R  &hm LSHFT S &hm LCTRL T    &kp G          &kp M        &hm LCTRL N &hm LSHFT E &hm LALT I  &hm LGUI U
-    &mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LGUI))) D  &kp V  &kp K  &mt LS(LA(LC(LGUI))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &lt MEDI FSLH  &td_lcsh
-                                        &mo TILE   &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &mt LSHFT BSPC  &lt CODE DEL
+              &hml LGUI A  &hml LALT R  &hml LSHFT S  &hml LCTRL T  &kp G        &kp M     &hmr LCTRL N  &hmr LSHFT E  &hmr LALT I  &hmr LGUI U
+    &mt_qk LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LGUI))) D  &kp V  &kp K  &mt LS(LA(LC(LGUI))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &kp FSLH  &td_lcsh
+                                        &mo TILE   &lt_qk NUMB SPACE  &lt_qk NAVI TAB    &lt_qk SYMB RET  &mt_qk LSHFT BSPC  &lt_qk CODE DEL
                         >;
                 };
 
@@ -585,10 +616,10 @@ label= "NUMB"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp N1        &kp N2         &kp N3          &kp N4      &kp N5      &kp N6     &kp N7      &kp N8      &kp N9      &kp N0
-            &mt LGUI EXCL  &mt LALT EQUAL  &mt LSHFT MINUS   &mt LCTRL PLUS  &kp LT  &kp GT     &kp KP_N4   &kp KP_N5   &kp KP_N6   &mt LGUI COMMA
-    &trans      &none         &none         &kp PERCENT     &kp STAR    &kp RA(Z)    &kp RA(X)  &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp DOT    &none
-                                             &to BASE        &trans      &trans      &trans     &trans      &kp KP_N0
+                &kp N1        &kp N2         &kp N3          &kp N4      &kp N5      &kp N6     &kp N7      &kp N8      &kp N9   &kp N0
+            &mt LGUI EXCL  &mt LALT EQUAL  &mt LSHFT MINUS   &mt LCTRL PLUS  &kp LT  &kp GT     &kp N4      &kp N5      &kp N6   &mt LGUI COMMA
+    &trans      &none         &none         &kp PERCENT     &kp STAR    &kp RA(Z)    &kp RA(X)  &kp N1      &kp N2      &kp N3   &kp DOT    &none
+                                             &to BASE        &trans      &trans      &trans     &kp SPACE   &kp N0
                         >;
                 };
 
@@ -687,7 +718,7 @@ label= "TILE"                              ;
 
                 &kp LG(LC(ESC))  &kp LG(LS(ESC))  &none  &none  &kp LG(GRAVE)   &none  &kp LG(HOME)      &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
                 &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp LG(LS(GRAVE))  &none  &kp LG(LEFT)   &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
-    &none       &none       &none       &none       &none       &none           &none       &none        &none       &none       &none
+    &none       &none       &none       &none       &none       &none           &none       &none        &none       &none       &none      &none
                                         &to BASE    &kp LCTRL   &kp LSHFT       &kp LALT    &mo TSIZ     &trans
                         >;
                 };
