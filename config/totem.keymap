@@ -36,10 +36,11 @@
 
 
 &mt {
-  quick-tap-ms = <100>;
+  quick-tap-ms = <150>;
   global-quick-tap;
   flavor = "tap-preferred";
-  tapping-term-ms = <170>;
+  tapping-term-ms = <220>;
+  require-prior-idle-ms = <125>;
 };
 
 / {
@@ -56,6 +57,12 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&kp K_LOCK>;
+        };
+        td_lcsh: tap_shift_lock {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&kp K_LOCK>;
         };
         td_spup: tap_dance_splitup {
             compatible = "zmk,behavior-tap-dance";
@@ -427,26 +434,26 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃     A     ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃     U     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    BSPC   ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃           ┃
+// ┃    BSPC   ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃    LOCK   ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    ESC    ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    DEL    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃   RMETA   ┃   RALT    ┃   RSHFT   ┃   RCTRL   ┃           ┃   ┃           ┃    ^R     ┃    ⇧R     ┃    ⌥R     ┃     ⌘R    ┃
+//             ┃   RMETA   ┃   RALT    ┃   RSHFT   ┃   RCTRL   ┃           ┃   ┃           ┃    ^R     ┃    ⇧R     ┃    ⌥R     ┃     NOR   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃   LMETA   ┃   LALT    ┃   LSHFT   ┃   LCTRL   ┃           ┃   ┃           ┃     ^     ┃     ⇧     ┃    ⎇     ┃     ⌘     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃   TILE    ┃   COMP    ┃   MEH     ┃   HYP     ┃           ┃   ┃           ┃    HYP    ┃    MEH    ┃     ⎄     ┃    MED    ┃    NOR    ┃
+// ┃   LSHFT   ┃   TILE    ┃   COMP    ┃   MEH     ┃   HYP     ┃           ┃   ┃           ┃    HYP    ┃    MEH    ┃     ⎄     ┃    MED    ┃   LSHFT   ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    FUN    ┃    NUM    ┃    NAV    ┃   ┃    SYM    ┃    NUM    ┃   CODE    ┃
+//                                     ┃    FUN    ┃    NUM    ┃    NAV    ┃   ┃    SYM    ┃   LSHFT   ┃   CODE    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷             ╷         ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &mt RGUI SQT
+                &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &lt NORW SQT
                 &mt LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T    &kp G          &kp M        &mt LCTRL N &mt LSHFT E &mt LALT I  &mt LGUI U
-    &kp BSPC    &lt TILE Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LGUI))) D  &kp V  &kp K  &mt LS(LA(LC(LGUI))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &lt MEDI FSLH  &mo NORW
-                                        &lt FUNC ESC  &lt NUMB SPACE  &lt NAVI TAB   &lt SYMB RET  &lt NUMB BSPC  &lt CODE DEL
+    &mt LSHFT BSPC  &lt TILE Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LGUI))) D  &kp V  &kp K  &mt LS(LA(LC(LGUI))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &lt MEDI FSLH  &td_lcsh
+                                        &lt FUNC ESC  &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &mt LSHFT BSPC  &lt CODE DEL
                         >;
                 };
 
@@ -470,7 +477,7 @@ label= "NAVI"                              ;
 
                 &none       &none       &none       &none       &none           &kp LC(HOME)  &kp HOME  &kp UP      &kp END     &kp PG_UP
        &mt LMETA LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &caps_word  &none  &kp LEFT   &kp DOWN    &kp RIGHT   &kp PG_DN
-    &kp BSPC    &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &none       &kp LC(HOME)  &none     &kp LC(END)  &none      &none
+    &kp BSPC    &kp LC(Z)  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp LS(LC(Z))    &none       &kp LC(HOME)  &none     &kp LC(END)  &none      &none
                                         &to BASE    &trans      &trans          &mo SELC    &kp LC(BSPC)  &kp LC(DEL)
                         >;
                 };
@@ -658,9 +665,9 @@ label= "TSIZ"                              ;
 label= "NORW"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃     Å     ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃      Å    ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃     Ø     ┃     Æ     ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃     Ø     ┃      Æ    ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -669,9 +676,9 @@ label= "NORW"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &mc_rm2 A A
-                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &kp RA(O)   &kp RA(A)
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans   &trans
+                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &mc_rm2 A A  &trans
+                &trans      &trans      &trans      &trans      &trans          &trans      &trans      &kp RA(O)   &kp RA(A)    &trans
+    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans       &trans   &trans
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
                 };
