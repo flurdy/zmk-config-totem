@@ -500,9 +500,9 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷             ╷         ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &lt NORW SQT
-              &hml LGUI A  &hml LALT R  &hml LSHFT S  &hml LCTRL T  &kp G        &kp M     &hmr LCTRL N  &hmr LSHFT E  &hmr LALT I  &hmr LGUI U
+              &hml LGUI A  &hml LALT R  &hml LSHFT S  &mt LCTRL T  &kp G        &kp M     &hmr LCTRL N  &hmr LSHFT E  &hmr LALT I  &hmr LGUI U
     &mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &mt LS(LA(LCTRL)) C  &mt LS(LA(LC(LGUI))) D  &kp V  &kp K  &mt LS(LA(LC(LGUI))) H  &mt LS(LA(LCTRL)) COMMA  &mt LS(RALT) DOT  &kp FSLH  &td_lcsh
-                                        &mo TILE   &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &mt_ LSHFT BSPC  &lt CODE DEL
+                                        &mo TILE   &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &mt LSHFT BSPC  &lt CODE DEL
                         >;
                 };
 
