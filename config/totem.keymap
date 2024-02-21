@@ -41,10 +41,10 @@
     require-prior-idle-ms = <125>;
 };
 
-&lt{
+&lt {
     tapping-term-ms = <150>;
     quick-tap-ms = <225>;
-}
+};
 
 / {
     behaviors {
