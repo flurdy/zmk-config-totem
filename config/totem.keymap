@@ -620,7 +620,7 @@ label= "CODE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃  SIDEBAR  ┃    ZEN    ┃           ┃           ┃ Move Term ┃  Terminal ┃   ┃           ┃           ┃           ┃           ┃           ┃  COMMENT  ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃   LAUNCH  ┃    RUN    ┃           ┃
+//                                     ┃           ┃           ┃ BLUETOOTH ┃   ┃   LAUNCH  ┃    RUN    ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -628,7 +628,7 @@ label= "CODE"                              ;
                 &to QWER    &to GAME    &none       &none       &none           &none       &none       &mt_split UP LA(LC(LS(UP)))  &none       &none
                 &none       &none       &vsc S      &none       &none           &none       &codspl LEFT  &mt_split DOWN LA(LC(LS(DOWN)))  &codspl RIGHT  &none
     &kp LC(BSLH)  &vsc Z    &none       &none    &kp LA(LC(LS(E)))  &kp LC(GRAVE)  &none    &none       &none       &none       &none       &kp LC(FSLH)
-                                        &to BASE    &trans      &trans          &kp LG(A)   &kp LA(F12)  &trans
+                                        &to BASE    &trans      &mo BLUE        &kp LG(A)   &kp LA(F12)  &trans
                         >;
                 };
 
