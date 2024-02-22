@@ -34,12 +34,12 @@
 #define BLUE 16
 
 &mt {
-    retro-tap;
-//    quick-tap-ms = <325>;
-//    global-quick-tap;
-//    flavor = "tap-preferred";
-//    tapping-term-ms = <250>;
-//    require-prior-idle-ms = <125>;
+//   retro-tap;
+    quick-tap-ms = <325>;
+    global-quick-tap;
+    flavor = "tap-preferred";
+    tapping-term-ms = <250>;
+    require-prior-idle-ms = <125>;
 };
 
 &lt {
