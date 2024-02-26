@@ -195,24 +195,6 @@
                 <&macro_tap &kp N6 &kp N4 &kp N1>;
         };
 
-        emo_thi: macro_emoji_thinking {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N9 &kp N1 &kp N4>;
-        };
-
-        emo_pop: macro_emoji_pop {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N3 &kp N7 &kp F>;
-        };
-
         emo_shr: macro_emoji_shrug {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
@@ -220,78 +202,6 @@
                 <&macro_tap &kp LC(LS(U))>,
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N9 &kp N3 &kp N7>;
-        };
-
-        emo_sho: macro_emoji_shook {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N2 &kp E>;
-        };
-
-        emo_swe: macro_emoji_swear {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N9 &kp N2 &kp N6>;
-        };
-
-        emo_sun: macro_emoji_sunglass {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N0 &kp E>;
-        };
-
-        emo_see: macro_emoji_nosee {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N4 &kp N8>;
-        };
-
-        emo_grm: macro_emoji_grimace {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N2 &kp C>;
-        };
-
-        emo_brw: macro_emoji_eyebrow {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N9 &kp N2 &kp N8>;
-        };
-
-        emo_lok: macro_emoji_look {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N4 &kp N4 &kp O>;
-        };
-
-        emo_drk: macro_emoji_drunk {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N9 &kp N2 &kp A>;
         };
 
         emo_hap: macro_emoji_happy {
@@ -310,60 +220,6 @@
                 <&macro_tap &kp LC(LS(U))>,
                 <&macro_tap &kp N1 &kp F>,
                 <&macro_tap &kp N6 &kp N2 &kp N1>;
-        };
-
-        emo_wei: macro_emoji_weird {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp A &kp E &kp N4>;
-        };
-
-        emo_kis: macro_emoji_kiss {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N1 &kp N8>;
-        };
-
-        emo_ton: macro_emoji_tong {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N1 &kp C>;
-        };
-
-        emo_win: macro_emoji_wink {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N0 &kp N9>;
-        };
-
-        emo_zzz: macro_emoji_sleep {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N3 &kp N4>;
-        };
-
-        emo_non: macro_emoji_nothing {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap &kp LC(LS(U))>,
-                <&macro_tap &kp N1 &kp F>,
-                <&macro_tap &kp N6 &kp N1 &kp N0>;
         };
 
         mac_tar: macro_thick_arrow {
@@ -484,7 +340,7 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃     A     ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃     U     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    BSPC   ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃    LOCK   ┃
+// ┃    BSPC   ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    DEL    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -502,7 +358,7 @@ label= "BASE"                              ;
 
                 &mt RGUI Q  &mt RALT W  &mt RSHFT F &mt RCTRL P    &kp B          &kp J        &mt RCTRL L &mt RSHFT O &mt RALT Y  &lt NORW SQT
               &mt LGUI A  &mt LALT R  &mt LSHFT S  &mt LCTRL T  &kp G        &kp M       &mt LCTRL N  &mt LSHFT E  &mt LALT I  &mt LGUI U
-    &mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &kp C  &kp D    &kp V            &kp K     &kp H       &kp COMMA   &mt LS(RALT) DOT  &kp FSLH  &tog MEDI
+    &mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &kp C  &kp D    &kp V            &kp K      &kp H      &kp COMMA   &mt LS(RALT) DOT  &kp FSLH  &mo MEDI
                                         &mo TILE   &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &kp BSPC  &lt CODE DEL
                         >;
                 };
@@ -646,14 +502,14 @@ label= "MEDI"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃    MUTE   ┃    VOL-   ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃ BLUETOOTH ┃   ┃           ┃           ┃           ┃
+//                                     ┃           ┃           ┃ BLUETOOTH ┃   ┃           ┃   VOL-    ┃    VOL+   ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp K_LOCK  &none       &kp C_BRI_UP  &none     &kp C_SLEEP     &none       &kp C_RW    &kp C_PLAY  &kp C_FF    &none
-                &none       &none       &kp C_BRI_DN  &none     &none           &none       &kp C_PREV  &kp C_STOP  &kp C_NEXT  &none
-    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &none       &none
+                &none       &none       &kp C_BRI_DN  &none     &none           &none       &kp C_PREV  &kp C_STOP  &kp C_NEXT  &kp K_VOL_UP
+    &trans      &none       &none       &none       &none       &none           &none       &none       &none       &kp C_MUTE  &kp K_VOL_DN  &none
                                         &to BASE    &trans      &mo BLUE        &trans      &kp C_VOL_DN  &kp C_VOL_UP
                         >;
                 };
@@ -701,8 +557,8 @@ label= "TSIZ"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none       &none       &none       &none           &none       &none       &kp LG(PLUS)  &none     &none
-                &none       &none       &none       &none       &none           &none  &kp LG(LS(MINUS))  &kp LG(MINUS)  &kp LG(LS(PLUS))  &none
+                &none       &none       &none       &none       &none           &none       &none       &kp LG(LS(EQUAL))  &none     &none
+                &none       &none       &none       &none       &none           &none  &kp LG(MINUS)  &kp LG(LS(MINUS))  &kp LG(EQUAL)  &none
     &trans      &trans      &none       &none       &none       &none           &none       &none       &none         &none     &none       &none
                                         &to BASE    &trans      &trans          &trans      &trans      &trans
                         >;
@@ -831,20 +687,20 @@ label= "GAME"                              ;
 label= "EMJ"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃  POPCORN  ┃           ┃    EYES   ┃ FACEPALM  ┃   SHRUG   ┃   ┃  THINK    ┃ EYE BROW  ┃  GRIMACE  ┃  NOTHING  ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃  THUMB UP ┃           ┃           ┃   ┃   ROFL    ┃   LAUGH   ┃  SMILE    ┃   COOL    ┃  NO SEE   ┃
+//             ┃           ┃           ┃  THUMB UP ┃ FACEPALM  ┃  SHRUG    ┃   ┃   ROFL    ┃   LAUGH   ┃  SMILE    ┃    SAD    ┃   ANGRY   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃   SLEEP   ┃   WINK    ┃   TONGUE  ┃   DRUNK   ┃   KISS    ┃   ┃   WEIRD   ┃           ┃   SAD     ┃   SHOOK   ┃  ANGRY    ┃   SWEAR   ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &emo_pop    &none       &emo_lok    &emo_fpa    &emo_shr         &emo_thi   &emo_brw    &emo_grm    &emo_non    &none
-                &none       &none       &emo_thu    &none       &none            &emo_lol   &emo_hap    &emo_smi    &emo_sun    &emo_see
-    &trans      &emo_zzz    &emo_win    &emo_ton    &emo_drk    &emo_kis         &emo_wei   &none       &emo_uha    &emo_sho    &emo_ang     &emo_swe
+                &none       &none       &none       &none       &none            &none      &none       &none       &none       &none
+                &none       &none       &emo_thu    &emo_fpa    &emo_shr         &emo_lol   &emo_hap    &emo_smi    &emo_uha    &emo_ang
+    &trans      &none       &none       &none       &none       &none            &none      &none       &none       &none       &none       &none
                                         &to BASE    &trans      &trans           &trans     &trans      &trans
                         >;
                 };
