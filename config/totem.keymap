@@ -106,7 +106,7 @@
             compatible = "zmk,behavior-macro-one-param";
             bindings =
                 <&macro_tap>,
-                <&kp LA(K) &macro_param_1to1>,
+                <&kp LA(N) &macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>;
         };
@@ -116,7 +116,7 @@
             compatible = "zmk,behavior-macro-one-param";
             bindings =
                 <&macro_tap>,
-                <&kp LA(K) &macro_param_1to1>,
+                <&kp LA(N) &macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>;
         };
@@ -165,102 +165,6 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp DEL>;
-        };
-
-        emo_lol: macro_emoji_lol {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N9 &kp N2 &kp N3>;
-        };
-
-        emo_thu: macro_emoji_thumb {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N4 &kp N4 &kp D>;
-        };
-
-        emo_smi: macro_emoji_smile {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N6 &kp N4 &kp N2>;
-        };
-
-        emo_fpa: macro_emoji_facepalm {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N9 &kp N2 &kp N6>;
-        };
-
-        emo_uha: macro_emoji_unhappy {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N6 &kp N4 &kp N1>;
-        };
-
-        emo_shr: macro_emoji_shrug {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N9 &kp N3 &kp N7>;
-        };
-
-        emo_hap: macro_emoji_happy {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N6 &kp N0 &kp N4>;
-        };
-
-        emo_ang: macro_emoji_angry {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N6 &kp N2 &kp N1>;
         };
 
         mac_tar: macro_thick_arrow {
@@ -326,7 +230,7 @@
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp F>,
+                <&kp R>,
                 <&macro_release>,
                 <&kp LSHFT>,
                 <&macro_tap>,
@@ -340,7 +244,7 @@
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp F>,
+                <&kp R>,
                 <&macro_release>,
                 <&kp LSHFT>,
                 <&macro_tap>,
@@ -360,7 +264,7 @@
             compatible = "zmk,behavior-macro";
             bindings =
                 <&macro_tap>,
-                <&kp S &kp DQT &kp SPACE &kp DQT>,
+                <&kp D &kp DQT &kp SPACE &kp DQT>,
                 <&macro_tap>,
                 <&kp LEFT &kp LEFT>;
         };
@@ -412,9 +316,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &mt RGUI Q  &mt RALT W      &mt RSHFT F  &mt RCTRL P     &kp B           &kp J         &mt RCTRL L  &mt RSHFT O   &mt RALT Y        &lt NORW SQT
-                &mt LGUI A  &mt LCTRL R      &mt LSHFT S  &mt LALT T     &kp G           &kp M         &mt LALT N  &mt LSHFT E   &mt LCTRL I        &mt LGUI U
-&mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &kp C        &kp D           &kp V           &kp K         &kp H        &kp COMMA     &mt LS(RALT) DOT  &kp FSLH      &mo MEDI
+                &mt RGUI Q  &mt RALT W      &mt RSHFT E  &mt RCTRL R     &kp T           &kp Y         &mt RCTRL U  &mt RSHFT I   &mt RALT O        &lt NORW P
+                &mt LGUI A  &mt LCTRL S     &mt LSHFT D  &mt LALT F      &kp G           &kp H         &mt LALT J   &mt LSHFT K   &mt LCTRL L       &mt LGUI SEMI
+&mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &kp C        &kp V           &kp B           &kp N         &kp M        &kp COMMA     &mt LS(RALT) DOT  &kp FSLH      &mo MEDI
                                             &mo TILE     &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &kp BSPC     &lt CODE DEL
             >;
         };
@@ -438,9 +342,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &none            &none           &kp LA(F)        &none            &none            &kp LA(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
-          &mt LMETA LA(A)  &mt LCTRL LA(R)  &mt LSHFT LA(S)  &mt LALT LA(T)  &caps_word       &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
-&kp BSPC  &kp LA(Z)        &kp LA(X)       &kp LA(C)        &kp LA(V)        &kp LS(LA(Z))    &none         &kp LA(HOME)  &none        &kp LA(END)  &none      &none
+          &none            &none           &kp LA(R)        &none            &none            &kp LA(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
+          &mt LMETA LA(A)  &mt LCTRL LA(S)  &mt LSHFT LA(D)  &mt LALT LA(F)  &caps_word       &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
+&kp BSPC  &kp LA(Z)        &kp LA(X)       &kp LA(C)        &kp LA(B)        &kp LS(LA(Z))    &none         &kp LA(HOME)  &none        &kp LA(END)  &none      &none
                                            &to BASE         &trans           &trans           &mo SELC      &kp LA(BSPC)  &kp LA(DEL)
             >;
         };
@@ -467,7 +371,7 @@
        &kp LS(LC(0))      &kp HASH      &kp POUND        &kp CARET        &kp LBKT    &kp RBKT  &none         &none            &kp RALT       &kp RGUI
        &mt LGUI LS(NUBS)  &mt LCTRL DQT  &mt LSHFT UNDER  &mt LALT GRAVE  &kp LPAR    &kp RPAR  &mt LALT AT  &mt LSHFT COLON  &mt LCTRL SEMI  &kp LGUI
 &none  &kp NUBS           &kp PIPE      &kp AMPS         &kp DLLR         &kp LBRC    &kp RBRC  &none         &none            &kp RA(LSHFT)  &kp QMARK  &none
-                                        &to BASE         &mo CSYM         &mo EMOJ    &trans    &trans        &trans
+                                        &to BASE         &mo CSYM         &trans      &trans    &trans        &trans
             >;
         };
 
@@ -544,7 +448,7 @@
             bindings = <
               &to QWER  &to GAME  &none     &none              &none            &none      &none         &mt_split UP LC(LA(LS(UP)))      &none          &none
               &none     &none     &vsc S    &none              &none            &none      &codspl LEFT  &mt_split DOWN LC(LA(LS(DOWN)))  &codspl RIGHT  &none
-&kp LA(BSLH)  &vsc Z    &none     &none     &kp LC(LA(LS(E)))  &kp LA(GRAVE)    &none      &none         &none                            &none          &none  &kp LA(FSLH)
+&kp LA(BSLH)  &vsc Z    &none     &none     &kp LC(LA(LS(K)))  &kp LA(GRAVE)    &none      &none         &none                            &none          &none  &kp LA(FSLH)
                                   &to BASE  &trans             &mo BLUE         &kp LG(A)  &kp LC(F2)    &trans
             >;
         };
@@ -647,7 +551,7 @@
 
             bindings = <
         &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans     &mc_rm2 A A  &trans
-        &trans  &trans  &trans    &trans  &trans    &trans  &trans  &kp RA(O)  &kp RA(A)    &trans
+        &trans  &trans  &trans    &trans  &trans    &trans  &trans  &kp RA(I)  &kp RA(A)    &trans
 &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans     &trans       &trans  &trans
                         &to BASE  &trans  &trans    &trans  &trans  &trans
             >;
@@ -698,9 +602,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &none  &kp LA(U)  &none     &kp LA(K)  &none     &none   &kp LA(A)      &none          &kp LA(E)      &none
-        &none  &kp LA(W)  &none     &kp LC(D)  &none     &none   &kp LC(B)      &none          &kp LC(F)      &none
-&trans  &none  &none      &none     &none      &none     &none   &kp LC(LA(A))  &kp LC(LA(D))  &kp LC(LA(R))  &none  &none
+        &none  &kp LA(SEMI)  &none     &kp LA(N)  &none     &none   &kp LA(A)      &none          &kp LA(K)      &none
+        &none  &kp LA(W)  &none     &kp LC(V)  &none     &none   &kp LC(T)      &none          &kp LC(E)      &none
+&trans  &none  &none      &none     &none      &none     &none   &kp LC(LA(A))  &kp LC(LA(V))  &kp LC(LA(S))  &none  &none
                           &to BASE  &trans     &trans    &trans  &trans         &trans
             >;
         };
@@ -745,32 +649,6 @@
            &kp A  &kp R  &kp S     &kp T      &kp G     &kp M    &kp N     &kp E      &kp I    &kp U
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp D      &kp V     &kp K    &kp H     &kp COMMA  &kp DOT  &trans   &kp LALT
                          &td_base  &kp SPACE  &trans    &kp RET  &kp BSPC  &kp DEL
-            >;
-        };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        emoji_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "EMJ";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃           ┃           ┃  THUMB UP ┃ FACEPALM  ┃  SHRUG    ┃   ┃   ROFL    ┃   LAUGH   ┃  SMILE    ┃    SAD    ┃   ANGRY   ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &none  &none  &none     &none     &none       &none     &none     &none     &none     &none
-        &none  &none  &emo_thu  &emo_fpa  &emo_shr    &emo_lol  &emo_hap  &emo_smi  &emo_uha  &emo_ang
-&trans  &none  &none  &none     &none     &none       &none     &none     &none     &none     &none     &none
-                      &to BASE  &trans    &trans      &trans    &trans    &trans
             >;
         };
 
