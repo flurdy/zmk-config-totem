@@ -413,9 +413,9 @@
 
             bindings = <
                 &mt RGUI Q  &mt RALT W      &mt RSHFT F  &mt RCTRL P     &kp B           &kp J         &mt RCTRL L  &mt RSHFT O   &mt RALT Y        &lt NORW SQT
-                &mt LGUI A  &mt LCTRL R      &mt LSHFT S  &mt LALT T     &kp G           &kp M         &mt LALT N  &mt LSHFT E   &mt LCTRL I        &mt LGUI U
-&mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &kp C        &kp D           &kp V           &kp K         &kp H        &kp COMMA     &mt LS(RALT) DOT  &kp FSLH      &mo MEDI
-                                            &mo TILE     &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &kp BSPC     &lt CODE DEL
+                &mt LGUI A  &mt LCTRL R     &mt LSHFT S  &mt LALT T      &lt 7 G         &kp M         &mt LALT N   &mt LSHFT E   &mt LCTRL I       &mt LGUI U
+&mt LSHFT BSPC  &lt FUNC Z  &mt LS(RALT) X  &kp C        &lt 7 D         &kp V           &kp K         &kp H        &kp COMMA     &mt LS(RALT) DOT  &kp FSLH      &mo MEDI
+                                            &lt 3 SPACE  &lt NUMB SPACE  &lt NAVI TAB    &lt SYMB RET  &kp BSPC     &lt CODE DEL
             >;
         };
 
@@ -438,10 +438,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &none            &none           &kp LA(F)        &none            &none            &kp LA(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
+          &none            &none            &kp LA(F)        &none           &none            &kp LA(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
           &mt LMETA LA(A)  &mt LCTRL LA(R)  &mt LSHFT LA(S)  &mt LALT LA(T)  &caps_word       &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
-&kp BSPC  &kp LA(Z)        &kp LA(X)       &kp LA(C)        &kp LA(V)        &kp LS(LA(Z))    &none         &kp LA(HOME)  &none        &kp LA(END)  &none      &none
-                                           &to BASE         &trans           &trans           &mo SELC      &kp LA(BSPC)  &kp LA(DEL)
+&kp BSPC  &kp LA(Z)        &kp LA(X)        &kp LA(C)        &kp LA(V)       &kp LS(LA(Z))    &none         &kp LA(HOME)  &none        &kp LA(END)  &none      &none
+                                            &to BASE         &trans          &trans           &mo SELC      &kp LA(BSPC)  &kp LA(DEL)
             >;
         };
 
@@ -464,10 +464,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LS(LC(0))      &kp HASH      &kp POUND        &kp CARET        &kp LBKT    &kp RBKT  &none         &none            &kp RALT       &kp RGUI
+       &kp LS(LC(0))      &kp HASH       &kp POUND        &kp CARET       &kp LBKT    &kp RBKT  &none        &none            &kp RALT        &kp RGUI
        &mt LGUI LS(NUBS)  &mt LCTRL DQT  &mt LSHFT UNDER  &mt LALT GRAVE  &kp LPAR    &kp RPAR  &mt LALT AT  &mt LSHFT COLON  &mt LCTRL SEMI  &kp LGUI
-&none  &kp NUBS           &kp PIPE      &kp AMPS         &kp DLLR         &kp LBRC    &kp RBRC  &none         &none            &kp RA(LSHFT)  &kp QMARK  &none
-                                        &to BASE         &mo CSYM         &mo EMOJ    &trans    &trans        &trans
+&none  &kp NUBS           &kp PIPE       &kp AMPS         &kp DLLR        &kp LBRC    &kp RBRC  &none        &none            &kp RA(LSHFT)   &kp QMARK  &none
+                                         &to BASE         &mo CSYM        &mo EMOJ    &trans    &trans       &trans
             >;
         };
 
@@ -490,10 +490,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp N1           &kp N2          &kp N3           &kp N4               &kp N5       &kp N6     &kp N7     &kp N8  &kp N9  &kp N0
+        &kp N1           &kp N2           &kp N3           &kp N4              &kp N5       &kp N6     &kp N7     &kp N8  &kp N9  &kp N0
         &mt LGUI LS(N1)  &mt LCTRL EQUAL  &mt LSHFT MINUS  &mt LALT LS(EQUAL)  &kp LT       &kp GT     &kp N4     &kp N5  &kp N6  &mt LGUI COMMA
-&trans  &none            &none           &kp PERCENT      &kp STAR             &kp RA(Z)    &kp RA(X)  &kp N1     &kp N2  &kp N3  &kp DOT         &none
-                                         &to BASE         &trans               &trans       &trans     &kp SPACE  &kp N0
+&trans  &none            &none            &kp PERCENT      &kp STAR            &kp RA(Z)    &kp RA(X)  &kp N1     &kp N2  &kp N3  &kp DOT         &none
+                                          &to BASE         &trans              &trans       &trans     &kp SPACE  &kp N0
             >;
         };
 
@@ -516,10 +516,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp PAUSE_BREAK  &kp SLCK  &kp KP_NUM  &kp PSCRN  &kp CAPS    &none   &kp F7  &kp F8  &kp F9  &kp F12
-        &kp LGUI         &kp LCTRL  &kp LSHFT   &kp LALT  &kp INS     &none   &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &none            &none     &none       &none      &none       &none   &kp F1  &kp F2  &kp F3  &kp F10  &none
-                                   &to BASE    &trans     &trans      &trans  &trans  &trans
+        &kp PAUSE_BREAK  &kp SLCK   &kp KP_NUM  &kp PSCRN  &kp CAPS    &none   &kp F7  &kp F8  &kp F9  &kp F12
+        &kp LGUI         &kp LCTRL  &kp LSHFT   &kp LALT   &kp INS     &none   &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &none            &none      &none       &none      &none       &none   &kp F1  &kp F2  &kp F3  &kp F10  &none
+                                    &to BASE    &trans     &trans      &trans  &trans  &trans
             >;
         };
 
@@ -542,7 +542,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &to QWER  &to GAME  &none     &none              &none            &none      &none         &mt_split UP LC(LA(LS(UP)))      &none          &none
+              &to QWER  &to GAME  &none     &none              &none            &kp F12    &none         &mt_split UP LC(LA(LS(UP)))      &none          &none
               &none     &none     &vsc S    &none              &none            &none      &codspl LEFT  &mt_split DOWN LC(LA(LS(DOWN)))  &codspl RIGHT  &none
 &kp LA(BSLH)  &vsc Z    &none     &none     &kp LC(LA(LS(E)))  &kp LA(GRAVE)    &none      &none         &none                            &none          &none  &kp LA(FSLH)
                                   &to BASE  &trans             &mo BLUE         &kp LG(A)  &kp LC(F2)    &trans
@@ -594,10 +594,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LG(LS(ESC))  &kp LG(LA(ESC))  &none      &none      &kp LG(GRAVE)        &none     &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
-       &kp LGUI         &kp LCTRL         &kp LSHFT  &kp LALT  &kp LG(LS(GRAVE))    &none     &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
-&none  &none            &none            &none      &none      &none                &none     &none         &none         &none          &none          &none
-                                         &to BASE   &kp LALT  &kp LSHFT            &kp LCTRL  &mo TSIZ      &trans
+       &kp LG(LS(ESC))  &kp LG(LA(ESC))  &none         &kp LS(LG(GRAVE))  &kp LG(GRAVE)    &none      &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
+       &kp LGUI         &kp LCTRL        &kp LSHFT     &kp LALT           &none            &none      &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
+&none  &kp LCTRL        &kp LEFT_SHIFT   &kp LEFT_ALT  &none              &none            &none      &none         &none         &none          &none          &none
+                                         &to BASE      &kp LALT           &kp LSHFT        &kp LCTRL  &mo TSIZ      &trans
             >;
         };
 
