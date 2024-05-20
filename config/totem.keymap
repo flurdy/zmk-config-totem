@@ -464,10 +464,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LS(LC(0))      &kp HASH       &kp POUND        &kp CARET       &kp LBKT    &kp RBKT  &none        &none            &kp RALT        &kp RGUI
-       &mt LGUI LS(NUBS)  &mt LCTRL DQT  &mt LSHFT UNDER  &mt LALT GRAVE  &kp LPAR    &kp RPAR  &mt LALT AT  &mt LSHFT COLON  &mt LCTRL SEMI  &kp LGUI
-&none  &kp NUBS           &kp PIPE       &kp AMPS         &kp DLLR        &kp LBRC    &kp RBRC  &none        &none            &kp RA(LSHFT)   &kp QMARK  &none
-                                         &to BASE         &mo CSYM        &mo EMOJ    &trans    &trans       &trans
+       &kp LS(LC(0))      &kp HASH       &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(Z)    &kp RA(X)  &kp CARET    &none            &kp RALT        &kp RGUI
+       &mt LGUI LS(NUBS)  &mt LCTRL DQT  &mt LSHFT UNDER   &mt LALT GRAVE    &kp LPAR     &kp RPAR   &mt LALT AT  &mt LSHFT COLON  &mt LCTRL SEMI  &kp LGUI
+&none  &kp NUBS           &kp PIPE       &kp AMPS          &kp DLLR          &kp LBRC     &kp RBRC   &none        &none            &kp RA(LSHFT)   &kp QMARK  &none
+                                         &to BASE          &mo CSYM          &mo EMOJ     &trans     &trans       &trans
             >;
         };
 
@@ -490,10 +490,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp N1           &kp N2           &kp N3           &kp N4              &kp N5       &kp N6     &kp N7     &kp N8  &kp N9  &kp N0
-        &mt LGUI LS(N1)  &mt LCTRL EQUAL  &mt LSHFT MINUS  &mt LALT LS(EQUAL)  &kp LT       &kp GT     &kp N4     &kp N5  &kp N6  &mt LGUI COMMA
-&trans  &none            &none            &kp PERCENT      &kp STAR            &kp RA(Z)    &kp RA(X)  &kp N1     &kp N2  &kp N3  &kp DOT         &none
-                                          &to BASE         &trans              &trans       &trans     &kp SPACE  &kp N0
+        &kp N1           &kp N2           &kp N3           &kp N4              &kp N5              &kp N6             &kp N7     &kp N8  &kp N9  &kp N0
+        &mt LGUI LS(N1)  &mt LCTRL EQUAL  &mt LSHFT MINUS  &mt LALT LS(EQUAL)  &kp LT              &kp GT             &kp N4     &kp N5  &kp N6  &mt LGUI COMMA
+&trans  &none            &none            &kp PERCENT      &kp STAR            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N1     &kp N2  &kp N3  &kp DOT         &none
+                                          &to BASE         &trans              &trans              &trans             &kp SPACE  &kp N0
             >;
         };
 
