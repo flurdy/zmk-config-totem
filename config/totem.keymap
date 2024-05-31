@@ -412,10 +412,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &mt RGUI Q  &mt RALT W      &mt RSHFT F  &mt RCTRL P  &kp B        &kp J      &mt RCTRL L  &mt RSHFT O  &mt RALT Y        &lt 9 SQT
-                &mt LGUI A  &mt LCTRL R     &mt LSHFT S  &mt LALT T   &lt 7 G      &kp M      &mt LALT N   &mt LSHFT E  &mt LCTRL I       &mt LGUI U
-&mt LSHFT BSPC  &lt 4 Z     &mt LS(RALT) X  &kp C        &lt 7 D      &kp V        &kp K      &kp H        &kp COMMA    &mt LS(RALT) DOT  &kp FSLH    &mo 6
-                                            &lt 3 SPACE  &lt 3 SPACE  &lt 1 TAB    &lt 2 RET  &kp BSPC     &lt 5 DEL
+                &mt RGUI Q  &mt RALT W      &mt RSHFT F  &mt RCTRL P  &kp B                  &kp J      &mt RCTRL L  &mt RSHFT O  &mt RALT Y        &lt 9 SQT
+                &mt LGUI A  &mt LCTRL R     &mt LSHFT S  &mt LALT T   &mt RS(LA(LCTRL)) G    &kp M      &mt LALT N   &mt LSHFT E  &mt LCTRL I       &mt LGUI U
+&mt LSHFT BSPC  &lt 4 Z     &mt LS(RALT) X  &kp C        &lt 7 D      &kp V                  &kp K      &kp H        &kp COMMA    &mt LS(RALT) DOT  &kp FSLH    &mo 6
+                                            &lt 3 SPACE  &lt 3 SPACE  &lt 1 TAB              &lt 2 RET  &kp BSPC     &lt 5 DEL
             >;
         };
 
@@ -438,10 +438,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &none            &none            &kp LA(F)        &none           &none            &kp LA(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
-          &mt LMETA LA(A)  &mt LCTRL LA(R)  &mt LSHFT LA(S)  &mt LALT LA(T)  &caps_word       &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
-&kp BSPC  &kp LA(Z)        &kp LA(X)        &kp LA(C)        &kp LA(V)       &kp LS(LA(Z))    &none         &kp LA(HOME)  &none        &kp LA(END)  &none      &none
-                                            &to 0            &trans          &trans           &mo 10        &kp LA(BSPC)  &kp LA(DEL)
+          &none            &none            &kp LA(F)        &none           &none                   &kp LA(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
+          &mt LMETA LA(A)  &mt LCTRL LA(R)  &mt LSHFT LA(S)  &mt LALT LA(T)  &kp LS(LC(LEFT_ALT))    &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
+&kp BSPC  &kp LA(Z)        &kp LA(X)        &kp LA(C)        &kp LA(V)       &kp LS(LA(Z))           &none         &kp LA(HOME)  &none        &kp LA(END)  &none      &none
+                                            &to 0            &trans          &trans                  &mo 10        &kp LA(BSPC)  &kp LA(DEL)
             >;
         };
 
