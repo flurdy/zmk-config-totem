@@ -412,10 +412,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &mt RGUI Q  &mt RALT W      &mt RSHFT F  &mt RCTRL P  &kp B        &kp J      &mt RCTRL L  &mt RSHFT O  &mt RALT Y        &lt 9 SQT
-                &mt LGUI A  &mt LCTRL R     &mt LSHFT S  &mt LALT T   &lt 5 G      &lt 5 M    &mt LALT N   &mt LSHFT E  &mt LCTRL I       &mt LGUI U
-&mt LSHFT BSPC  &kp Z       &mt LS(RALT) X  &kp C        &lt 7 D      &lt 4 V      &kp K      &kp H        &kp COMMA    &mt LS(RALT) DOT  &kp FSLH    &mo 6
-                                            &lt 3 SPACE  &lt 3 SPACE  &lt 1 TAB    &lt 2 RET  &kp BSPC     &kp DEL
+                &mt RGUI Q  &mt RALT W      &mt RSHFT F   &mt RCTRL P  &kp B        &kp J      &mt RCTRL L  &mt RSHFT O  &mt RALT Y        &lt 9 SQT
+                &mt LGUI A  &mt LCTRL R     &mt LSHFT S   &mt LALT T   &lt 5 G      &lt 5 M    &mt LALT N   &mt LSHFT E  &mt LCTRL I       &mt LGUI U
+&mt LSHFT BSPC  &kp Z       &mt LS(RALT) X  &kp C         &lt 7 D      &lt 4 V      &kp K      &kp H        &kp COMMA    &mt LS(RALT) DOT  &kp FSLH    &mo 6
+                                            &lt 3 ESCAPE  &lt 3 SPACE  &lt 1 TAB    &lt 2 RET  &kp BSPC     &kp DEL
             >;
         };
 
