@@ -167,102 +167,6 @@
                 <&kp DEL>;
         };
 
-        emo_lol: macro_emoji_lol {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N9 &kp N2 &kp N3>;
-        };
-
-        emo_thu: macro_emoji_thumb {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N4 &kp N4 &kp D>;
-        };
-
-        emo_smi: macro_emoji_smile {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N6 &kp N4 &kp N2>;
-        };
-
-        emo_fpa: macro_emoji_facepalm {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N9 &kp N2 &kp N6>;
-        };
-
-        emo_uha: macro_emoji_unhappy {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N6 &kp N4 &kp N1>;
-        };
-
-        emo_shr: macro_emoji_shrug {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N9 &kp N3 &kp N7>;
-        };
-
-        emo_hap: macro_emoji_happy {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N6 &kp N0 &kp N4>;
-        };
-
-        emo_ang: macro_emoji_angry {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LA(LS(U))>,
-                <&macro_tap>,
-                <&kp N1 &kp F>,
-                <&macro_tap>,
-                <&kp N6 &kp N2 &kp N1>;
-        };
-
         mac_tar: macro_thick_arrow {
             #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
@@ -289,32 +193,6 @@
                 <&kp LBRC &kp SPACE &kp UNDER &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp SPACE &kp RBRC>,
                 <&macro_tap>,
                 <&kp LEFT &kp LEFT>;
-        };
-
-        mac_bua: macro_brckund_arrow {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings = <&macro_tap>, <&kp UNDER &kp SPACE &kp EQUAL &kp GT>;
-        };
-
-        mac_dlb: macro_dollar_brack {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LBKT &kp DOLLAR &kp LBRC &kp SPACE &kp RBRC &kp RBKT>,
-                <&macro_tap>,
-                <&kp LEFT &kp LEFT>;
-        };
-
-        mac_bra: macro_brackets {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp LPAR &kp LBRC &kp SPACE &kp RBRC &kp RPAR &kp SEMI>,
-                <&macro_tap>,
-                <&kp LEFT &kp LEFT &kp LEFT>;
         };
 
         mac_fbk: macro_cats_brack {
@@ -347,29 +225,6 @@
                 <&kp LBKT &kp UNDER &kp RBKT>;
         };
 
-        mac_qot: macro_js_qoute {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp DQT &kp SPACE &kp DQT &kp COLON &kp SPACE &kp DQT &kp SPACE &kp DQT>;
-        };
-
-        mac_iqt: macro_int_qoute {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings =
-                <&macro_tap>,
-                <&kp S &kp DQT &kp SPACE &kp DQT>,
-                <&macro_tap>,
-                <&kp LEFT &kp LEFT>;
-        };
-
-        mac_hdr: macro_home_dir {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-macro";
-            bindings = <&macro_tap>, <&kp TILDE &kp FSLH>;
-        };
     };
 
     combos {
@@ -399,16 +254,16 @@
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
             // ┃    BSPC   ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃           ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    DEL    ┃
+            //                                     ┃    ESC    ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    DEL    ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃   RMETA   ┃   RALT    ┃   RSHFT   ┃   RCTRL   ┃           ┃   ┃           ┃   RCTRL   ┃   RSHFT   ┃    RALT   ┃    NORW   ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃   LMETA   ┃   LCTRL    ┃   LSHFT   ┃   LALT   ┃           ┃   ┃           ┃   LALT   ┃   LSHFT   ┃    LCTRL   ┃   LMETA   ┃
+            //             ┃   LMETA   ┃   LCTRL   ┃   LSHFT   ┃   LALT    ┃    CODE   ┃   ┃   CODE    ┃   LALT    ┃   LSHFT   ┃   LCTRL   ┃   LMETA   ┃
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃   LSHFT   ┃   FUN     ┃   COMP    ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃    COMP   ┃           ┃   MEDI    ┃
+            // ┃   LSHFT   ┃           ┃   COMP    ┃           ┃   TILE    ┃    FUN    ┃   ┃           ┃           ┃           ┃    COMP   ┃           ┃   MEDI    ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃    TILE   ┃    NUM    ┃    NAV    ┃   ┃    SYM    ┃   LSHFT   ┃   CODE    ┃
+            //                                     ┃           ┃    NUM    ┃    NAV    ┃   ┃    SYM    ┃   LSHFT   ┃           ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
@@ -484,16 +339,16 @@
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
             //             ┃     !     ┃     =     ┃     -     ┃     +     ┃     <     ┃   ┃     >     ┃     4     ┃     5     ┃     6     ┃           ┃
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃           ┃     %     ┃     *     ┃     «     ┃   ┃     »     ┃     1     ┃     2     ┃     3     ┃     .     ┃     ,     ┃
+            // ┃           ┃           ┃           ┃     %     ┃     *     ┃     [     ┃   ┃     ]     ┃     1     ┃     2     ┃     3     ┃     .     ┃     ,     ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃     0     ┃
+            //                                     ┃           ┃           ┃           ┃   ┃           ┃     0     ┃     0     ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
         &kp N1           &kp N2           &kp N3           &kp N4              &kp N5              &kp N6             &kp N7     &kp N8  &kp N9  &kp N0
         &mt LGUI LS(N1)  &mt LCTRL EQUAL  &mt LSHFT MINUS  &mt LALT LS(EQUAL)  &kp LT              &kp GT             &kp N4     &kp N5  &kp N6  &mt LGUI COMMA
 &trans  &none            &none            &kp PERCENT      &kp STAR            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N1     &kp N2  &kp N3  &kp DOT         &none
-                                          &to 0            &trans              &trans              &trans             &kp SPACE  &kp N0
+                                          &to 0            &trans              &trans              &trans             &kp N0     &kp N0
             >;
         };
 
@@ -760,17 +615,17 @@
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃           ┃           ┃    [F]    ┃   F[_]    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ { __ => } ┃  __ =>    ┃    =>     ┃     ->    ┃     <-    ┃   ┃   "": ""  ┃   s" "    ┃   [${ }]  ┃   ({ });  ┃           ┃
+            //             ┃ { __ => } ┃  __ =>    ┃    =>     ┃     ->    ┃     <-    ┃   ┃           ┃           ┃           ┃           ┃           ┃
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃    ~/     ┃           ┃
+            // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
         &none     &none     &mac_fbk  &mac_fun  &none       &none     &none     &none     &none     &none
-        &mac_uar  &mac_bua  &mac_tar  &mac_rar  &mac_lar    &mac_qot  &mac_iqt  &mac_dlb  &mac_bra  &none
-&trans  &none     &none     &none     &none     &none       &none     &none     &none     &none     &mac_hdr  &trans
+        &mac_uar  &none     &mac_tar  &mac_rar  &mac_lar    &none     &none     &none     &none     &none
+&trans  &none     &none     &none     &none     &none       &none     &none     &none     &none     &none  &trans
                             &to 0     &trans    &trans      &trans    &trans    &trans
             >;
         };
