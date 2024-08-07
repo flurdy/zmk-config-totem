@@ -285,10 +285,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp N1           &kp N2           &kp N3           &kp N4              &kp N5              &kp N6             &kp N7     &kp N8  &kp N9  &kp N0
-        &mt LGUI LS(N1)  &mt LCTRL EQUAL  &mt LSHFT MINUS  &mt LALT LS(EQUAL)  &kp LT              &kp GT             &kp N4     &kp N5  &kp N6  &mt LGUI COMMA
-&trans  &none            &none            &kp PERCENT      &kp STAR            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N1     &kp N2  &kp N3  &kp DOT         &none
-                                          &to 0            &trans              &trans              &trans             &kp N0     &kp N0
+        &kp N1           &kp N2           &kp N3           &kp N4              &kp N5              &kp N6             &kp N7  &kp N8  &kp N9  &kp N0
+        &mt LGUI LS(N1)  &mt LCTRL EQUAL  &mt LSHFT MINUS  &mt LALT LS(EQUAL)  &kp LT              &kp GT             &kp N4  &kp N5  &kp N6  &mt LGUI COMMA
+&trans  &none            &none            &kp PERCENT      &kp STAR            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N1  &kp N2  &kp N3  &kp DOT         &none
+                                          &to 0            &trans              &trans              &trans             &kp N0  &kp N0
             >;
         };
 
@@ -337,9 +337,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &to 12  &to 13  &none   &none              &none            &kp F12    &none       &kp LC(LA(LS(UP)))    &none   &none
-              &none   &none   &vsc S  &mo 13             &none            &none      &none       &kp LC(LA(LS(DOWN)))  &none   &none
-&kp LA(BSLH)  &vsc Z  &none   &none   &kp LC(LA(LS(E)))  &kp LA(GRAVE)    &none      &none       &none                 &none   &none  &kp LA(FSLH)
+              &to 12  &to 13  &none   &none              &none            &kp F12    &none       &kp LC(LA(LS(UP)))    &none  &none
+              &none   &none   &vsc S  &mo 13             &none            &none      &none       &kp LC(LA(LS(DOWN)))  &none  &none
+&kp LA(BSLH)  &vsc Z  &none   &none   &kp LC(LA(LS(E)))  &kp LA(GRAVE)    &none      &none       &none                 &none  &none  &kp LA(FSLH)
                               &to 0   &trans             &mo 14           &kp LG(A)  &kp LC(F2)  &trans
             >;
         };
@@ -365,8 +365,8 @@
             bindings = <
         &kp K_LOCK  &none  &kp C_BRI_UP  &none   &kp C_SLEEP    &none   &kp C_RW    &kp C_PLAY  &kp C_FF    &kp K_VOL_UP
         &none       &none  &kp C_BRI_DN  &none   &none          &none   &kp C_PREV  &kp C_STOP  &kp C_NEXT  &kp K_VOL_DN
-&trans  &none       &none  &none         &none   &none          &none   &none       &none       &kp C_MUTE  &none        &none
-                           &to 0         &trans  &mo 14         &trans  &none       &none
+&trans  &none       &none  &none         &none   &none          &none   &none       &none       &kp C_MUTE  &none         &none
+                           &to 0         &trans  &mo 15         &trans  &none       &none
             >;
         };
 
@@ -572,10 +572,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &none     &none     &none     &none     &none       &none     &none         &codspl UP   &none         &none
-        &none     &none     &none     &none     &none       &none     &codspl LEFT  &codspl DOWN &codspl RIGHT &none
-&trans  &none     &none     &none     &none     &none       &none     &none         &none        &none         &none  &trans
-                            &to 0     &trans    &trans      &trans    &trans        &trans
+        &none  &none  &none  &none   &none     &none   &none         &codspl UP    &none          &none
+        &none  &none  &none  &none   &none     &none   &codspl LEFT  &codspl DOWN  &codspl RIGHT  &none
+&trans  &none  &none  &none  &none   &none     &none   &none         &none         &none          &none  &trans
+                      &to 0  &trans  &trans    &trans  &trans        &trans
             >;
         };
 
