@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-macro-one-param";
             bindings =
                 <&macro_tap>,
-                <&kp LA(K) &macro_param_1to1>,
+                <&kp LC(K) &macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>;
         };
@@ -115,7 +115,7 @@
             compatible = "zmk,behavior-macro-one-param";
             bindings =
                 <&macro_tap>,
-                <&kp LA(K) &macro_param_1to1>,
+                <&kp LC(K) &macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>;
         };
@@ -155,11 +155,11 @@
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_press>,
-                <&kp LALT &macro_param_1to1>,
+                <&kp LCTRL &macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&kp LALT>,
+                <&kp LCTRL>,
                 <&macro_release>,
                 <&kp LSHFT>,
                 <&macro_tap>,
@@ -199,7 +199,7 @@
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃   RMETA   ┃   RALT    ┃   RSHFT   ┃   RCTRL   ┃           ┃   ┃           ┃   RCTRL   ┃   RSHFT   ┃    RALT   ┃    NORW   ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃   LMETA   ┃   LCTRL   ┃   LSHFT   ┃   LALT    ┃    CODE   ┃   ┃   CODE    ┃   LALT    ┃   LSHFT   ┃   LCTRL   ┃   LMETA   ┃
+            //             ┃   LMETA   ┃   LALT   ┃   LSHFT   ┃   LCTRL    ┃    CODE   ┃   ┃   CODE    ┃   LCTRL    ┃   LSHFT   ┃   LALT   ┃   LMETA   ┃
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
             // ┃   LSHFT   ┃           ┃   COMP    ┃           ┃   TILE    ┃    FUN    ┃   ┃           ┃           ┃           ┃    COMP   ┃           ┃   MEDI    ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -208,7 +208,7 @@
 
             bindings = <
                 &mt RGUI Q        &mt RALT W      &mt RSHFT F   &mt RCTRL P  &kp B        &kp J      &mt RCTRL L      &mt RSHFT O  &mt RALT Y        &lt 9 SQT
-                &mt LGUI A        &mt LCTRL R     &mt LSHFT S   &mt LALT T   &lt 7 G      &lt 5 M    &mt LALT N       &mt LSHFT E  &mt LCTRL I       &mt LGUI U
+                &mt LGUI A        &mt LALT R     &mt LSHFT S   &mt LCTRL T   &lt 7 G      &lt 5 M    &mt LCTRL N       &mt LSHFT E  &mt LALT I       &mt LGUI U
 &mt LSHFT BSPC  &mt LEFT_SHIFT Z  &mt LS(RALT) X  &kp C         &lt 5 D      &lt 4 V      &lt 3 K    &kp H            &kp COMMA    &mt LS(RALT) DOT  &lt 6 FSLH  &mo 6
                                                   &lt 3 ESCAPE  &lt 3 SPACE  &lt 1 TAB    &lt 2 RET  &lt 1 BACKSPACE  &kp DEL
             >;
@@ -233,10 +233,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &none            &none            &kp LA(F)        &none           &none                   &kp LA(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
-          &mt LMETA LA(A)  &mt LCTRL LA(R)  &mt LSHFT LA(S)  &mt LALT LA(T)  &kp LS(LC(LEFT_ALT))    &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
-&kp BSPC  &kp LA(Z)        &kp LA(X)        &kp LA(C)        &kp LA(V)       &kp LS(LA(Z))           &none         &kp LA(HOME)  &none        &kp LA(END)  &none      &none
-                                            &to 0            &trans          &trans                  &mo 10        &kp LA(BSPC)  &kp LA(DEL)
+          &none            &none            &kp LC(F)        &none           &none                   &kp LC(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
+          &mt LMETA LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &kp LS(LA(LEFT_ALT))    &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
+&kp BSPC  &kp LC(Z)        &kp LC(X)        &kp LC(C)        &kp LC(V)       &kp LS(LC(Z))           &none         &kp LC(HOME)  &none        &kp LC(END)  &none      &none
+                                            &to 0            &trans          &trans                  &mo 10        &kp LC(BSPC)  &kp LC(DEL)
             >;
         };
 
@@ -259,8 +259,8 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LS(LC(0))      &kp HASH       &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(Z)    &kp RA(X)  &kp CARET    &none            &kp RALT        &kp RGUI
-       &mt LGUI LS(NUBS)  &mt LCTRL DQT  &mt LSHFT UNDER   &mt LALT GRAVE    &kp LPAR     &kp RPAR   &mt LALT AT  &mt LSHFT COLON  &mt LCTRL SEMI  &kp LGUI
+       &kp LS(LA(0))      &kp HASH       &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(Z)    &kp RA(X)  &kp CARET    &none            &kp RALT        &kp RGUI
+       &mt LGUI LS(NUBS)  &mt LALT DQT  &mt LSHFT UNDER   &mt LCTRL GRAVE    &kp LPAR     &kp RPAR   &mt LCTRL AT  &mt LSHFT COLON  &mt LALT SEMI  &kp LGUI
 &none  &kp NUBS           &kp PIPE       &kp AMPS          &kp DLLR          &kp LBRC     &kp RBRC   &none        &none            &kp RA(LSHFT)   &kp QMARK  &none
                                          &to 0             &trans            &trans       &trans     &trans       &trans
             >;
@@ -286,7 +286,7 @@
 
             bindings = <
         &kp N1           &kp N2           &kp N3           &kp N4              &kp N5              &kp N6             &kp N7  &kp N8  &kp N9  &kp N0
-        &mt LGUI LS(N1)  &mt LCTRL EQUAL  &mt LSHFT MINUS  &mt LALT LS(EQUAL)  &kp LT              &kp GT             &kp N4  &kp N5  &kp N6  &mt LGUI COMMA
+        &mt LGUI LS(N1)  &mt LALT EQUAL  &mt LSHFT MINUS  &mt LCTRL LS(EQUAL)  &kp LT              &kp GT             &kp N4  &kp N5  &kp N6  &mt LGUI COMMA
 &trans  &none            &none            &kp PERCENT      &kp STAR            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N1  &kp N2  &kp N3  &kp DOT         &none
                                           &to 0            &trans              &trans              &trans             &kp N0  &kp N0
             >;
@@ -312,7 +312,7 @@
 
             bindings = <
         &kp PAUSE_BREAK  &kp SLCK   &kp KP_NUM  &kp PSCRN  &kp CAPS    &none   &kp F7  &kp F8  &kp F9  &kp F12
-        &kp LGUI         &kp LCTRL  &kp LSHFT   &kp LALT   &kp INS     &none   &kp F4  &kp F5  &kp F6  &kp F11
+        &kp LGUI         &kp LALT  &kp LSHFT   &kp LCTRL   &kp INS     &none   &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &none            &none      &none       &none      &none       &none   &kp F1  &kp F2  &kp F3  &kp F10  &none
                                     &to 0       &trans     &trans      &trans  &trans  &trans
             >;
@@ -337,10 +337,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &to 12  &to 13  &none   &none              &none            &kp F12    &none       &kp LC(LA(LS(UP)))    &none  &none
-              &none   &none   &vsc S  &mo 13             &none            &none      &none       &kp LC(LA(LS(DOWN)))  &none  &none
-&kp LA(BSLH)  &vsc Z  &none   &none   &kp LC(LA(LS(E)))  &kp LA(GRAVE)    &none      &none       &none                 &none  &none  &kp LA(FSLH)
-                              &to 0   &trans             &mo 14           &kp LG(A)  &kp LC(F2)  &trans
+              &to 12  &to 13  &none   &none              &none            &kp F12    &none       &kp LA(LC(LS(UP)))    &none  &none
+              &none   &none   &vsc S  &mo 13             &none            &none      &none       &kp LA(LC(LS(DOWN)))  &none  &none
+&kp LC(BSLH)  &vsc Z  &none   &none   &kp LA(LC(LS(E)))  &kp LC(GRAVE)    &none      &none       &none                 &none  &none  &kp LC(FSLH)
+                              &to 0   &trans             &mo 14           &kp LG(A)  &kp LA(F2)  &trans
             >;
         };
 
@@ -389,10 +389,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LG(LS(ESC))  &kp LG(LA(ESC))  &none         &kp LS(LG(GRAVE))  &kp LG(GRAVE)    &none      &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
-       &kp LGUI         &kp LCTRL        &kp LSHFT     &kp LALT           &none            &none      &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
-&none  &kp LCTRL        &kp LEFT_SHIFT   &kp LEFT_ALT  &none              &none            &none      &none         &none         &none          &none          &none
-                                         &to 0         &kp LALT           &kp LSHFT        &kp LCTRL  &mo 8         &trans
+       &kp LG(LS(ESC))  &kp LG(LC(ESC))  &none         &kp LS(LG(GRAVE))  &kp LG(GRAVE)    &none      &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
+       &kp LGUI         &kp LALT        &kp LSHFT     &kp LCTRL           &none            &none      &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
+&none  &kp LALT        &kp LEFT_SHIFT   &kp LEFT_ALT  &none              &none            &none      &none         &none         &none          &none          &none
+                                         &to 0         &kp LCTRL           &kp LSHFT        &kp LALT  &mo 8         &trans
             >;
         };
 
@@ -467,9 +467,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &mc_csldl HOME  &mc_sldl HOME  &none  &mc_sldl END   &mc_csldl END    &kp LA(LS(HOME))  &kp LS(HOME)      &none   &kp LS(END)        &kp LA(LS(END))
-        &none           &kp LA(BSPC)   &none  &kp LA(DEL)    &none            &none             &kp LA(LS(LEFT))  &none   &kp LA(LS(RIGHT))  &none
-&trans  &none           &none          &none  &mc_csldl END  &none            &none             &none             &none   &kp LA(LS(END))    &none            &none
+        &mc_csldl HOME  &mc_sldl HOME  &none  &mc_sldl END   &mc_csldl END    &kp LC(LS(HOME))  &kp LS(HOME)      &none   &kp LS(END)        &kp LC(LS(END))
+        &none           &kp LC(BSPC)   &none  &kp LC(DEL)    &none            &none             &kp LC(LS(LEFT))  &none   &kp LC(LS(RIGHT))  &none
+&trans  &none           &none          &none  &mc_csldl END  &none            &none             &none             &none   &kp LC(LS(END))    &none            &none
                                        &to 0  &trans         &mo 11           &trans            &mo 11            &trans
             >;
         };
@@ -493,9 +493,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &none  &kp LA(U)  &none  &kp LA(K)  &none     &none   &kp LA(A)      &none          &kp LA(E)      &none
-        &none  &kp LA(W)  &none  &kp LC(D)  &none     &none   &kp LC(B)      &none          &kp LC(F)      &none
-&trans  &none  &none      &none  &none      &none     &none   &kp LC(LA(A))  &kp LC(LA(D))  &kp LC(LA(R))  &none  &none
+        &none  &kp LC(U)  &none  &kp LC(K)  &none     &none   &kp LC(A)      &none          &kp LC(E)      &none
+        &none  &kp LC(W)  &none  &kp LA(D)  &none     &none   &kp LA(B)      &none          &kp LA(F)      &none
+&trans  &none  &none      &none  &none      &none     &none   &kp LA(LC(A))  &kp LA(LC(D))  &kp LA(LC(R))  &none  &none
                           &to 0  &trans     &trans    &trans  &trans         &trans
             >;
         };
@@ -521,7 +521,7 @@
             bindings = <
            &kp Q   &kp W   &kp E     &kp R      &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P
            &kp A   &kp S   &kp D     &kp F      &trans    &kp H   &kp J   &kp K      &kp L    &kp SQT
-&kp LSHFT  &trans  &trans  &trans    &kp V      &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &trans   &kp LALT
+&kp LSHFT  &trans  &trans  &trans    &kp V      &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &trans   &kp LCTRL
                            &td_base  &kp SPACE  &trans    &trans  &trans  &trans
             >;
         };
@@ -539,7 +539,7 @@
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
             //             ┃     A     ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃     U     ┃
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃    LSHFT  ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃   LALT    ┃
+            // ┃    LSHFT  ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃   LCTRL    ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             //                                     ┃           ┃    SPC    ┃    TAB    ┃   ┃   ENTER   ┃    BSPC   ┃    DEL    ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -547,7 +547,7 @@
             bindings = <
            &kp Q  &kp W  &kp F     &kp P      &kp B     &kp J    &kp L     &kp O      &kp Y    &kp SQT
            &kp A  &kp R  &kp S     &kp T      &kp G     &kp M    &kp N     &kp E      &kp I    &kp U
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp D      &kp V     &kp K    &kp H     &kp COMMA  &kp DOT  &trans   &kp LALT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp D      &kp V     &kp K    &kp H     &kp COMMA  &kp DOT  &trans   &kp LCTRL
                          &td_base  &kp SPACE  &trans    &kp RET  &kp BSPC  &kp DEL
             >;
         };
