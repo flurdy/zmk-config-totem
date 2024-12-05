@@ -165,6 +165,14 @@
                 <&macro_tap>,
                 <&kp DEL>;
         };
+
+        nor_aa: nor_aa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LS(RA(LEFT_BRACKET)) &kp A>;
+
+            label = "NOR_AA";
+        };
     };
 
     combos {
@@ -207,10 +215,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &mt RGUI Q        &mt RALT W      &mt RSHFT F   &mt RCTRL P  &kp B        &kp J      &mt RCTRL L      &mt RSHFT O  &mt RALT Y        &lt 9 SQT
-                &mt LGUI A        &mt LALT R     &mt LSHFT S   &mt LCTRL T   &lt 7 G      &lt 5 M    &mt LCTRL N       &mt LSHFT E  &mt LALT I       &mt LGUI U
-&mt LSHFT BSPC  &mt LEFT_SHIFT Z  &mt LS(RALT) X  &kp C         &lt 5 D      &lt 4 V      &lt 3 K    &kp H            &kp COMMA    &mt LS(RALT) DOT  &lt 6 FSLH  &mo 6
-                                                  &lt 3 ESCAPE  &lt 3 SPACE  &lt 1 TAB    &lt 2 RET  &lt 1 BACKSPACE  &kp DEL
+               &mt RGUI Q        &mt RALT W      &mt RSHFT F   &mt RCTRL P  &kp B        &kp J      &mt RCTRL L      &mt RSHFT O  &mt RALT Y        &lt 9 SQT
+               &mt LGUI A        &mt LALT R      &mt LSHFT S   &mt LCTRL T  &lt 7 G      &lt 5 M    &mt LCTRL N      &mt LSHFT E  &mt LALT I        &mt LGUI U
+&kp BACKSPACE  &mt LEFT_SHIFT Z  &mt LS(RALT) X  &kp C         &lt 5 D      &lt 4 V      &lt 3 K    &kp H            &kp COMMA    &mt LS(RALT) DOT  &lt 6 FSLH  &mo 6
+                                                 &lt 3 ESCAPE  &lt 3 SPACE  &lt 1 TAB    &lt 2 RET  &lt 1 BACKSPACE  &kp DEL
             >;
         };
 
@@ -233,10 +241,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &none            &none            &kp LC(F)        &none           &none                   &kp LC(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
-          &mt LMETA LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &kp LS(LA(LEFT_ALT))    &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
-&kp BSPC  &kp LC(Z)        &kp LC(X)        &kp LC(C)        &kp LC(V)       &kp LS(LC(Z))           &none         &kp LC(HOME)  &none        &kp LC(END)  &none      &none
-                                            &to 0            &trans          &trans                  &mo 10        &kp LC(BSPC)  &kp LC(DEL)
+          &none            &none           &kp LC(F)        &none            &none            &kp LC(HOME)  &kp HOME      &kp UP       &kp END      &kp PG_UP
+          &mt LMETA LC(A)  &mt LALT LC(R)  &mt LSHFT LC(S)  &mt LCTRL LC(T)  &none            &none         &kp LEFT      &kp DOWN     &kp RIGHT    &kp PG_DN
+&kp BSPC  &kp LC(Z)        &kp LC(X)       &kp LC(C)        &kp LC(V)        &kp LS(LC(Z))    &none         &kp LC(HOME)  &none        &kp LC(END)  &none      &none
+                                           &to 0            &trans           &trans           &mo 10        &kp LC(BSPC)  &kp LC(DEL)
             >;
         };
 
@@ -259,10 +267,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LS(LA(0))      &kp HASH       &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(Z)    &kp RA(X)  &kp CARET    &none            &kp RALT        &kp RGUI
-       &mt LGUI LS(NUBS)  &mt LALT DQT  &mt LSHFT UNDER   &mt LCTRL GRAVE    &kp LPAR     &kp RPAR   &mt LCTRL AT  &mt LSHFT COLON  &mt LALT SEMI  &kp LGUI
-&none  &kp NUBS           &kp PIPE       &kp AMPS          &kp DLLR          &kp LBRC     &kp RBRC   &none        &none            &kp RA(LSHFT)   &kp QMARK  &none
-                                         &to 0             &trans            &trans       &trans     &trans       &trans
+       &kp LS(LA(0))      &kp HASH      &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(Z)     &kp RA(X)  &kp CARET     &none            &kp RALT       &kp RGUI
+       &mt LGUI LS(NUBS)  &mt LALT DQT  &mt LSHFT UNDER   &mt LCTRL GRAVE   &kp LPAR      &kp RPAR   &mt LCTRL AT  &mt LSHFT COLON  &mt LALT SEMI  &kp LGUI
+&none  &kp NUBS           &kp PIPE      &kp AMPS          &kp DLLR          &kp LBRC      &kp RBRC   &none         &none            &kp RA(LSHFT)  &kp QMARK  &none
+                                        &to 0             &trans            &caps_word    &trans     &trans        &trans
             >;
         };
 
@@ -285,10 +293,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp N1           &kp N2           &kp N3           &kp N4              &kp N5              &kp N6             &kp N7  &kp N8  &kp N9  &kp N0
+        &kp N1           &kp N2          &kp N3           &kp N4               &kp N5              &kp N6             &kp N7  &kp N8  &kp N9  &kp N0
         &mt LGUI LS(N1)  &mt LALT EQUAL  &mt LSHFT MINUS  &mt LCTRL LS(EQUAL)  &kp LT              &kp GT             &kp N4  &kp N5  &kp N6  &mt LGUI COMMA
-&trans  &none            &none            &kp PERCENT      &kp STAR            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N1  &kp N2  &kp N3  &kp DOT         &none
-                                          &to 0            &trans              &trans              &trans             &kp N0  &kp N0
+&trans  &none            &none           &kp PERCENT      &kp STAR             &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N1  &kp N2  &kp N3  &kp DOT         &none
+                                         &to 0            &trans               &trans              &trans             &kp N0  &kp N0
             >;
         };
 
@@ -311,10 +319,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp PAUSE_BREAK  &kp SLCK   &kp KP_NUM  &kp PSCRN  &kp CAPS    &none   &kp F7  &kp F8  &kp F9  &kp F12
-        &kp LGUI         &kp LALT  &kp LSHFT   &kp LCTRL   &kp INS     &none   &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &none            &none      &none       &none      &none       &none   &kp F1  &kp F2  &kp F3  &kp F10  &none
-                                    &to 0       &trans     &trans      &trans  &trans  &trans
+        &kp PAUSE_BREAK  &kp SLCK  &kp KP_NUM  &kp PSCRN  &kp CAPS    &none   &kp F7  &kp F8  &kp F9  &kp F12
+        &kp LGUI         &kp LALT  &kp LSHFT   &kp LCTRL  &kp INS     &none   &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &none            &none     &none       &none      &none       &none   &kp F1  &kp F2  &kp F3  &kp F10  &none
+                                   &to 0       &trans     &trans      &trans  &trans  &trans
             >;
         };
 
@@ -337,10 +345,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &to 12  &to 13  &none   &none              &none            &kp F12    &none       &kp LA(LC(LS(UP)))    &none  &none
-              &none   &none   &vsc S  &mo 13             &none            &none      &none       &kp LA(LC(LS(DOWN)))  &none  &none
-&kp LC(BSLH)  &vsc Z  &none   &none   &kp LA(LC(LS(E)))  &kp LC(GRAVE)    &none      &none       &none                 &none  &none  &kp LC(FSLH)
-                              &to 0   &trans             &mo 14           &kp LG(A)  &kp LA(F2)  &trans
+              &to 12  &to 13  &none   &none              &none                &kp LS(F12)    &none      &kp LA(LC(LS(UP)))    &none  &none
+              &none   &none   &vsc S  &trans             &kp LS(LA(LC(E)))    &none          &none      &kp LA(LC(LS(DOWN)))  &none  &none
+&kp LC(BSLH)  &vsc Z  &none   &mo 14  &kp LA(LC(LS(E)))  &kp LC(GRAVE)        &kp LC(LS(K))  &none      &none                 &none  &kp LC(FSLH)  &kp LC(FSLH)
+                              &to 0   &trans             &mo 14               &kp LA(F2)     &kp LG(A)  &trans
             >;
         };
 
@@ -389,10 +397,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp LG(LS(ESC))  &kp LG(LC(ESC))  &none         &kp LS(LG(GRAVE))  &kp LG(GRAVE)    &none      &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
-       &kp LGUI         &kp LALT        &kp LSHFT     &kp LCTRL           &none            &none      &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
-&none  &kp LALT        &kp LEFT_SHIFT   &kp LEFT_ALT  &none              &none            &none      &none         &none         &none          &none          &none
-                                         &to 0         &kp LCTRL           &kp LSHFT        &kp LALT  &mo 8         &trans
+       &kp LG(LS(ESC))  &kp LG(LC(ESC))  &none         &kp LS(LG(GRAVE))  &kp LG(GRAVE)    &none     &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)
+       &kp LGUI         &kp LALT         &kp LSHFT     &kp LCTRL          &none            &none     &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)
+&none  &kp LALT         &kp LEFT_SHIFT   &kp LEFT_ALT  &none              &none            &none     &none         &none         &none          &none          &none
+                                         &to 0         &kp LCTRL          &kp LSHFT        &kp LALT  &mo 8         &mo 8
             >;
         };
 
@@ -441,9 +449,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &mc_rm2 A A  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp RA(O)  &kp RA(A)    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans       &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &nor_aa    &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp RA(O)  &kp RA(A)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans  &trans
                         &to 0   &trans  &trans    &trans  &trans  &trans
             >;
         };
