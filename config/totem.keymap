@@ -215,7 +215,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &mt RGUI Q        &mt RALT W      &mt RSHFT F   &mt RCTRL P  &kp B        &kp J      &mt RCTRL L      &mt RSHFT O  &mt RALT Y        &lt 9 SQT
+               &mt RGUI Q        &mt RALT W      &mt RSHFT F   &mt RCTRL P  &lt 15 B     &kp J      &mt RCTRL L      &mt RSHFT O  &mt RALT Y        &lt 9 SQT
                &mt LGUI A        &mt LALT R      &mt LSHFT S   &mt LCTRL T  &lt 7 G      &lt 5 M    &mt LCTRL N      &mt LSHFT E  &mt LALT I        &mt LGUI U
 &kp BACKSPACE  &mt LEFT_SHIFT Z  &mt LS(RALT) X  &kp C         &lt 5 D      &lt 4 V      &lt 3 K    &kp H            &kp COMMA    &mt LS(RALT) DOT  &lt 6 FSLH  &mo 6
                                                  &lt 3 ESCAPE  &lt 3 SPACE  &lt 1 TAB    &lt 2 RET  &lt 1 BACKSPACE  &kp DEL
